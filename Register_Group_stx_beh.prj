@@ -1,0 +1,2 @@
+vhdl isim_temp "CPU_Type.vhd"
+vhdl isim_temp "Register_Group.vhd"

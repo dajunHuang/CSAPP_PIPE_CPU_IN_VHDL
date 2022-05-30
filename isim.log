@@ -1,0 +1,10 @@
+ISim log file
+Running: C:\Users\Dajun\Desktop\y86_64_CPU_SEQ\tb_CPU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -view C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/wave config.wcfg -wdb C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/tb_CPU_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# run 200 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/uut/U1/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.

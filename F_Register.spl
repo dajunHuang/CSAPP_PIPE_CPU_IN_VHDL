@@ -1,0 +1,8 @@
+[Inputs]
+F_stall
+clk
+rst
+=Predict_PC[63:0]=
+[Outputs]
+=F_predPC[63:0]=
+[BiDir]

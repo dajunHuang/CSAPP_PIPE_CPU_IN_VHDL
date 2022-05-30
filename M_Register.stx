@@ -1,0 +1,44 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3516 - Found error in file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd". 
+WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+Compiling vhdl file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/CPU_Type.vhd" in Library work.
+Architecture cpu_type of Entity cpu_type is up to date.
+Compiling vhdl file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" in Library work.
+Entity <M_Register> compiled.
+ERROR:HDLParsers:164 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 59. parse error, unexpected IF
+ERROR:HDLParsers:800 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 63. Type of M_valC is incompatible with type of valC.
+ERROR:HDLParsers:800 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 64. Type of M_valP is incompatible with type of valP.
+ERROR:HDLParsers:800 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 65. Type of M_valE is incompatible with type of valE.
+ERROR:HDLParsers:800 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 66. Type of M_valE is incompatible with type of valE.
+ERROR:HDLParsers:164 - "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" Line 68. parse error, unexpected IF, expecting SEMICOLON
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> 
+
+Total memory usage is 171168 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

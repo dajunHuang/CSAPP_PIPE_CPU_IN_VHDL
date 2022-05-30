@@ -1,0 +1,3 @@
+vhdl work "CPU_Type.vhd"
+vhdl work "DATA_MEMORY.vhd"
+vhdl work "tb_dmemory.vhd"

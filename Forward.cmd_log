@@ -1,0 +1,2 @@
+vhdtdtfi -lib work CPU_Type.vhd -lib work Forward.vhd -prj y86_64_CPU_SEQ -o Forward.spl -module Forward -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a Forward.spl C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Forward.sym 

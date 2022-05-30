@@ -1,0 +1,48 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/tb_CPU_isim_beh.exe -prj C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/tb_CPU_beh.prj work.tb_CPU 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/CPU_Type.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/W_Register.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Stream_Control.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Select_PC.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Register_Group.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/INSTRUCTION_MEMORY.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/F_Register.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Forward.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/E_Register.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/D_Register.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/DATA_MEMORY.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/SEQ_CPU.vhd" into library work
+Parsing VHDL file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/tb_CPU.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 106800 KB
+Fuse CPU Usage: 217 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package cpu_type
+Compiling package numeric_std
+Compiling architecture behavioral of entity Stream_Control [stream_control_default]
+Compiling architecture behavioral of entity F_Register [f_register_default]
+Compiling architecture behavioral of entity Select_PC [select_pc_default]
+Compiling architecture behavioral of entity INSTRUCTION_MEMORY [instruction_memory_default]
+Compiling architecture behavioral of entity D_Register [d_register_default]
+Compiling architecture behavioral of entity Register_Group [register_group_default]
+Compiling architecture behavioral of entity Forward [forward_default]
+Compiling architecture behavioral of entity E_Register [e_register_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity M_Register [m_register_default]
+Compiling architecture behavioral of entity DATA_MEMORY [data_memory_default]
+Compiling architecture behavioral of entity W_Register [w_register_default]
+Compiling architecture behavioral of entity SEQ_CPU [seq_cpu_default]
+Compiling architecture behavior of entity tb_cpu
+Time Resolution for simulation is 1ps.
+Waiting for 13 sub-compilation(s) to finish...
+Compiled 31 VHDL Units
+Built simulation executable C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/tb_CPU_isim_beh.exe
+Fuse Memory Usage: 123488 KB
+Fuse CPU Usage: 374 ms

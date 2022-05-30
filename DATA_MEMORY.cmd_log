@@ -1,0 +1,1 @@
+vhdtdtfi -prj y86_64_CPU_SEQ -o C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/DATA_MEMORY.vhi -module DATA_MEMORY -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CPU_Type.vhd -lib work DATA_MEMORY.vhd 

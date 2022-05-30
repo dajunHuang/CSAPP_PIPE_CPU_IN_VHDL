@@ -1,0 +1,36 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-5 SEQ_CPU.ngc SEQ_CPU.ngd
+
+Reading NGO file "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/SEQ_CPU.ngc" ...
+Loading design module "C:\Users\Dajun\Desktop\y86_64_CPU_SEQ/SEQ_CPU.ngc"...
+WARNING:NgdBuild:578 - Design contains no instances.
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 121164 kilobytes
+
+Writing NGD file "SEQ_CPU.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "SEQ_CPU.bld"...

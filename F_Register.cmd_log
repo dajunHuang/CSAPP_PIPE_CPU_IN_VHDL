@@ -1,0 +1,2 @@
+vhdtdtfi -lib work CPU_Type.vhd -lib work F_Register.vhd -prj y86_64_CPU_SEQ -o F_Register.spl -module F_Register -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a F_Register.spl C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/F_Register.sym 

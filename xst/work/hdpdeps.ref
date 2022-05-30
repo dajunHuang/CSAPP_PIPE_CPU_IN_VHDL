@@ -1,0 +1,105 @@
+V3 64
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/ALU.vhd 2022/04/26.10:41:23 P.20131013
+EN work/ALU 1650975142 FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/ALU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/ALU/Behavioral 1650975143 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/ALU.vhd EN work/ALU 1650975142
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/CPU_Type.vhd 2022/04/26.19:30:07 P.20131013
+PH work/CPU_Type 1650975124 FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/CPU_Type.vhd \
+      PB ieee/std_logic_1164 1381692176
+PB work/CPU_Type 1650975125 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/CPU_Type.vhd PH work/CPU_Type 1650975124
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/DATA_MEMORY.vhd 2022/04/26.17:17:44 P.20131013
+EN work/DATA_MEMORY 1650975146 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/DATA_MEMORY.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/DATA_MEMORY/Behavioral 1650975147 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/DATA_MEMORY.vhd \
+      EN work/DATA_MEMORY 1650975146
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/D_Register.vhd 2022/04/26.16:49:01 P.20131013
+EN work/D_Register 1650975134 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/D_Register.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/D_Register/Behavioral 1650975135 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/D_Register.vhd EN work/D_Register 1650975134
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/E_Register.vhd 2022/04/26.16:49:06 P.20131013
+EN work/E_Register 1650975140 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/E_Register.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/E_Register/Behavioral 1650975141 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/E_Register.vhd EN work/E_Register 1650975140
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Forward.vhd 2022/04/26.15:49:53 P.20131013
+EN work/Forward 1650975138 FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Forward.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/Forward/Behavioral 1650975139 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Forward.vhd EN work/Forward 1650975138
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/F_Register.vhd 2022/04/26.20:12:02 P.20131013
+EN work/F_Register 1650975128 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/F_Register.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/F_Register/Behavioral 1650975129 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/F_Register.vhd EN work/F_Register 1650975128
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/INSTRUCTION_MEMORY.vhd 2022/04/26.19:54:52 P.20131013
+EN work/INSTRUCTION_MEMORY 1650975132 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/INSTRUCTION_MEMORY.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/INSTRUCTION_MEMORY/Behavioral 1650975133 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/INSTRUCTION_MEMORY.vhd \
+      EN work/INSTRUCTION_MEMORY 1650975132
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd 2022/04/26.14:05:30 P.20131013
+EN work/M_Register 1650975144 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/M_Register/Behavioral 1650975145 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/M_Register.vhd EN work/M_Register 1650975144
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/PC.vhd 2022/04/21.22:07:41 P.20131013
+EN work/PC 1650588779 FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/PC.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/PC/Behavioral 1650588780 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/PC.vhd EN work/PC 1650588779
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Register_Group.vhd 2022/04/26.15:55:04 P.20131013
+EN work/Register_Group 1650975136 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Register_Group.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/Register_Group/Behavioral 1650975137 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Register_Group.vhd \
+      EN work/Register_Group 1650975136
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Select_PC.vhd 2022/04/26.14:05:30 P.20131013
+EN work/Select_PC 1650975130 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Select_PC.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/Select_PC/Behavioral 1650975131 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Select_PC.vhd EN work/Select_PC 1650975130
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/SEQ_CPU.vhd 2022/04/26.19:51:30 P.20131013
+EN work/SEQ_CPU 1650975150 FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/SEQ_CPU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/SEQ_CPU/Behavioral 1650975151 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/SEQ_CPU.vhd EN work/SEQ_CPU 1650975150 \
+      CP Stream_Control CP F_Register CP Select_PC CP INSTRUCTION_MEMORY \
+      CP D_Register CP Register_Group CP Forward CP E_Register CP ALU CP M_Register \
+      CP DATA_MEMORY CP W_Register
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Stream_Control.vhd 2022/04/26.16:30:30 P.20131013
+EN work/Stream_Control 1650975126 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Stream_Control.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/Stream_Control/Behavioral 1650975127 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/Stream_Control.vhd \
+      EN work/Stream_Control 1650975126
+FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/W_Register.vhd 2022/04/26.13:55:36 P.20131013
+EN work/W_Register 1650975148 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/W_Register.vhd \
+      PB ieee/std_logic_1164 1381692176 PB work/CPU_Type 1650975125
+AR work/W_Register/Behavioral 1650975149 \
+      FL C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/W_Register.vhd EN work/W_Register 1650975148
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/ALU.vhd 2022/04/20.21:46:35 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/CPU_Type.vhd 2022/04/20.10:45:21 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/DATA_MEMORY.vhd 2022/04/20.22:06:08 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/INSTRUCTION_MEMORY.vhd 2022/04/20.22:18:22 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/PC.vhd 2022/04/20.21:46:35 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/Register_Group.vhd 2022/04/20.21:46:35 P.20131013
+FL C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/SEQ_CPU.vhd 2022/04/20.22:46:25 P.20131013

@@ -1,0 +1,2 @@
+vhdl work "CPU_Type.vhd"
+vhdl work "ALU.vhd"

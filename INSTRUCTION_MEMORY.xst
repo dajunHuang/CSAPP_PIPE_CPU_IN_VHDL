@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Dajun/Desktop/y86_64_CPU_SEQ/xst"
+elaborate
+-ifn INSTRUCTION_MEMORY.prj
+-ifmt mixed

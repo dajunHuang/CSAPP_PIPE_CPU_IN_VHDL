@@ -1,0 +1,1148 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: Register_Group.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Register_Group.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Register_Group"
+Output Format                      : NGC
+Target Device                      : xc3s5000-5-fg900
+
+---- Source Options
+Top Module Name                    : Register_Group
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/CPU_Type.vhd" in Library work.
+Architecture cpu_type of Entity cpu_type is up to date.
+Compiling vhdl file "C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/Register_Group.vhd" in Library work.
+Architecture behavioral of Entity register_group is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Register_Group> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Register_Group> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/Register_Group.vhd" line 52: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <icode>, <rA>, <rB>, <Cnd>, <val_rax>, <val_rbx>, <val_rdx>, <val_rsp>, <val_rbp>, <val_rsi>, <val_rdi>, <val_r8>, <val_r9>, <val_r10>, <val_r11>, <val_r12>, <val_r13>, <val_r14>, <valE>, <valM>
+Entity <Register_Group> analyzed. Unit <Register_Group> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Register_Group>.
+    Related source file is "C:/Users/djhuang_1/Desktop/zazong/FPGA/y86_64_CPU_SEQ/Register_Group.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ifun> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 64-bit latch for signal <valA>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <valB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r8$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r9$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r10$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rsi$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r11$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_r12$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rsp$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rbp$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rax$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rdi$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rbx$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rcx$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 64-bit latch for signal <val_rdx$mux0001>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r10>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r10$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r11>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r11$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r12>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r12$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r13$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r13$mux0001>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r14>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r14$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r8>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r8$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r9>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_r9$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rax>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rbp>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rbp$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rbx>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rbx$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rcx>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rcx$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rdi>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rdi$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rdx>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rdx$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rsi>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rsi$mux0000>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rsp>.
+    Found 64-bit 16-to-1 multiplexer for signal <val_rsp$mux0000>.
+    Found 64-bit 15-to-1 multiplexer for signal <valA$mux0000>.
+    Found 64-bit 15-to-1 multiplexer for signal <valB$mux0000>.
+    Summary:
+	inferred 1984 Multiplexer(s).
+Unit <Register_Group> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 16
+ 64-bit latch                                          : 16
+# Multiplexers                                         : 31
+ 64-bit 15-to-1 multiplexer                            : 2
+ 64-bit 16-to-1 multiplexer                            : 29
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 16
+ 64-bit latch                                          : 16
+# Multiplexers                                         : 29
+ 64-bit 15-to-1 multiplexer                            : 2
+ 64-bit 16-to-1 multiplexer                            : 27
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <val_rcx_mux0001_0> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_1> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_2> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_3> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_4> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_5> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_6> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_7> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_8> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_9> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_10> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_11> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_12> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_13> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_14> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_15> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_16> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_17> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_18> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_19> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_20> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_21> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_22> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_23> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_24> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_25> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_26> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_27> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_28> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_29> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_30> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_31> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_32> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_33> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_34> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_35> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_36> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_37> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_38> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_39> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_40> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_41> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_42> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_43> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_44> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_45> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_46> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_47> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_48> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_49> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_50> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_51> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_52> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_53> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_54> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_55> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_56> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_57> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_58> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_59> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_60> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_61> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_62> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2677 - Node <val_rcx_mux0001_63> of sequential type is unconnected in block <Register_Group>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001388, srcB_mux0000<3>_mmx_out126, valB_mux0000<0>, Mmux_valB_mux00001387, srcB_mux0000<2>_2_f6_659, Mmux_valB_mux00001386, srcB_mux0000<2>_mmx_out63, Mmux_valB_mux00001798, Mmux_valB_mux00001797, val_r8<0>, srcB_mux0000<2>_2_f6_4_f559, Mmux_val_r101081541, Mmux_valB_mux00001796, dstM_mux0000<3>_mmx_out54.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001312, valB_mux0000<1>, Mmux_valB_mux00001950, Mmux_valB_mux00001310, Mmux_valB_mux00001311, srcB_mux0000<2>_2_f6_4_f558, Mmux_valB_mux00001952, val_r8<1>, dstM_mux0000<3>_mmx_out52, srcB_mux0000<2>_2_f6_658, srcB_mux0000<2>_mmx_out62, Mmux_valB_mux00001951, srcB_mux0000<3>_mmx_out124, Mmux_val_r101081629.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101081717, srcB_mux0000<2>_mmx_out61, Mmux_valB_mux00002104, srcB_mux0000<2>_2_f6_4_f557, srcB_mux0000<3>_mmx_out122, dstM_mux0000<3>_mmx_out51, val_r8<2>, Mmux_valB_mux00001276, Mmux_valB_mux00002106, Mmux_valB_mux00002105, Mmux_valB_mux00001275, valB_mux0000<2>, srcB_mux0000<2>_2_f6_657, Mmux_valB_mux00001274.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001236, Mmux_valB_mux00001235, srcB_mux0000<2>_mmx_out60, Mmux_valB_mux00002260, srcB_mux0000<2>_2_f6_656, Mmux_valB_mux00002259, dstM_mux0000<3>_mmx_out50, val_r8<3>, Mmux_valB_mux00001234, srcB_mux0000<2>_2_f6_4_f556, srcB_mux0000<3>_mmx_out120, Mmux_val_r101081805, valB_mux0000<3>, Mmux_valB_mux00002258.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001192, srcB_mux0000<2>_2_f6_4_f554, dstM_mux0000<3>_mmx_out49, val_r8<4>, Mmux_valB_mux00002414, Mmux_valB_mux00002413, valB_mux0000<4>, srcB_mux0000<2>_mmx_out59, Mmux_valB_mux00001190, Mmux_val_r101081893, Mmux_valB_mux00001191, srcB_mux0000<3>_mmx_out118, Mmux_valB_mux00002412, srcB_mux0000<2>_2_f6_654.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out48, srcB_mux0000<2>_2_f6_653, Mmux_valB_mux00002566, srcB_mux0000<3>_mmx_out116, val_r8<5>, srcB_mux0000<2>_2_f6_4_f553, valB_mux0000<5>, srcB_mux0000<2>_mmx_out58, Mmux_valB_mux00001148, Mmux_valB_mux00002568, Mmux_valB_mux00002567, Mmux_valB_mux00001147, Mmux_val_r101081981, Mmux_valB_mux00001146.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001122, Mmux_val_r101082021, val_r8<6>, valB_mux0000<6>, Mmux_valB_mux00002638, Mmux_valB_mux00002637, Mmux_valB_mux00001124, Mmux_valB_mux00001123, Mmux_valB_mux00002636, srcB_mux0000<2>_2_f6_652, srcB_mux0000<2>_2_f6_4_f552, dstM_mux0000<3>_mmx_out47, srcB_mux0000<2>_mmx_out57, srcB_mux0000<3>_mmx_out114.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_mmx_out56, valB_mux0000<7>, val_r8<7>, srcB_mux0000<3>_mmx_out112, srcB_mux0000<2>_2_f6_4_f551, Mmux_valB_mux00002652, Mmux_valB_mux00002651, srcB_mux0000<2>_2_f6_651, Mmux_val_r101082029, Mmux_valB_mux00002650, dstM_mux0000<3>_mmx_out46, Mmux_valB_mux00001120, Mmux_valB_mux00001119, Mmux_valB_mux00001118.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r8<8>, Mmux_val_r101082037, Mmux_valB_mux00002666, Mmux_valB_mux00001083, srcB_mux0000<2>_mmx_out55, Mmux_valB_mux00001082, Mmux_valB_mux00002664, dstM_mux0000<3>_mmx_out45, srcB_mux0000<3>_mmx_out110, srcB_mux0000<2>_2_f6_650, srcB_mux0000<2>_2_f6_4_f550, Mmux_valB_mux00002665, Mmux_valB_mux00001084, valB_mux0000<8>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_649, Mmux_valB_mux00001039, Mmux_valB_mux00002680, Mmux_valB_mux00002679, dstM_mux0000<3>_mmx_out44, Mmux_valB_mux00001038, Mmux_val_r101082045, Mmux_valB_mux00002678, srcB_mux0000<2>_mmx_out54, valB_mux0000<9>, srcB_mux0000<3>_mmx_out108, Mmux_valB_mux00001040, srcB_mux0000<2>_2_f6_4_f549, val_r8<9>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001810, dstM_mux0000<3>_mmx_out43, srcB_mux0000<3>_mmx_out106, srcB_mux0000<2>_2_f6_648, Mmux_val_r101081549, srcB_mux0000<2>_2_f6_4_f548, srcB_mux0000<2>_mmx_out53, valB_mux0000<10>, Mmux_valB_mux00001812, Mmux_valB_mux00001811, Mmux_valB_mux00001000, Mmux_valB_mux0000999, val_r8<10>, Mmux_valB_mux0000998.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out42, Mmux_valB_mux0000963, srcB_mux0000<2>_2_f6_647, Mmux_valB_mux0000962, Mmux_valB_mux00001826, Mmux_valB_mux00001825, valB_mux0000<11>, val_r8<11>, Mmux_valB_mux00001824, Mmux_val_r101081557, srcB_mux0000<2>_mmx_out52, Mmux_valB_mux0000964, srcB_mux0000<2>_2_f6_4_f547, srcB_mux0000<3>_mmx_out104.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_mmx_out51, Mmux_valB_mux0000923, Mmux_valB_mux00001840, Mmux_valB_mux00001839, srcB_mux0000<3>_mmx_out102, srcB_mux0000<2>_2_f6_4_f546, Mmux_valB_mux0000922, Mmux_val_r101081565, valB_mux0000<12>, srcB_mux0000<2>_2_f6_646, Mmux_valB_mux00001838, val_r8<12>, dstM_mux0000<3>_mmx_out41, Mmux_valB_mux0000924.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001854, Mmux_valB_mux00001853, valB_mux0000<13>, srcB_mux0000<2>_mmx_out50, Mmux_valB_mux0000880, Mmux_valB_mux0000879, srcB_mux0000<3>_mmx_out100, Mmux_valB_mux0000878, val_r8<13>, Mmux_valB_mux00001852, srcB_mux0000<2>_2_f6_4_f545, dstM_mux0000<3>_mmx_out40, Mmux_val_r101081573, srcB_mux0000<2>_2_f6_645.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000840, Mmux_valB_mux00001868, Mmux_valB_mux00001867, Mmux_val_r101081581, valB_mux0000<14>, Mmux_valB_mux0000839, srcB_mux0000<2>_2_f6_4_f543, Mmux_valB_mux0000838, val_r8<14>, dstM_mux0000<3>_mmx_out39, Mmux_valB_mux00001866, srcB_mux0000<2>_2_f6_643, srcB_mux0000<2>_mmx_out49, srcB_mux0000<3>_mmx_out98.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000826, valB_mux0000<15>, srcB_mux0000<2>_2_f6_642, srcB_mux0000<3>_mmx_out96, Mmux_valB_mux00001881, dstM_mux0000<3>_mmx_out38, val_r8<15>, srcB_mux0000<2>_mmx_out48, Mmux_val_r101081589, Mmux_valB_mux00001880, Mmux_valB_mux0000828, srcB_mux0000<2>_2_f6_4_f542, Mmux_valB_mux0000827, Mmux_valB_mux00001882.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001896, srcB_mux0000<2>_2_f6_4_f541, Mmux_valB_mux00001895, valB_mux0000<16>, Mmux_val_r101081597, dstM_mux0000<3>_mmx_out37, srcB_mux0000<2>_2_f6_641, Mmux_valB_mux0000824, val_r8<16>, Mmux_valB_mux00001894, Mmux_valB_mux0000823, Mmux_valB_mux0000822, srcB_mux0000<2>_mmx_out47, srcB_mux0000<3>_mmx_out94.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_640, dstM_mux0000<3>_mmx_out36, srcB_mux0000<2>_mmx_out46, Mmux_valB_mux0000818, srcB_mux0000<3>_mmx_out92, Mmux_valB_mux00001908, val_r8<17>, Mmux_val_r101081605, srcB_mux0000<2>_2_f6_4_f540, Mmux_valB_mux0000820, Mmux_valB_mux00001910, Mmux_valB_mux00001909, Mmux_valB_mux0000819, valB_mux0000<17>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101081613, val_r8<18>, Mmux_valB_mux00001922, srcB_mux0000<2>_mmx_out45, Mmux_valB_mux0000816, srcB_mux0000<3>_mmx_out90, Mmux_valB_mux0000815, srcB_mux0000<2>_2_f6_4_f539, Mmux_valB_mux0000814, dstM_mux0000<3>_mmx_out35, Mmux_valB_mux00001924, valB_mux0000<18>, Mmux_valB_mux00001923, srcB_mux0000<2>_2_f6_639.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000812, val_r8<19>, Mmux_valB_mux0000811, Mmux_valB_mux00001936, Mmux_valB_mux0000810, Mmux_val_r101081621, srcB_mux0000<2>_2_f6_4_f538, dstM_mux0000<3>_mmx_out34, srcB_mux0000<2>_mmx_out44, valB_mux0000<19>, Mmux_valB_mux00001938, srcB_mux0000<3>_mmx_out88, Mmux_valB_mux00001937, srcB_mux0000<2>_2_f6_638.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r8<20>, Mmux_valB_mux00001964, Mmux_valB_mux0000808, srcB_mux0000<3>_mmx_out86, Mmux_valB_mux0000807, srcB_mux0000<2>_2_f6_4_f537, Mmux_val_r101081637, Mmux_valB_mux0000806, srcB_mux0000<2>_mmx_out43, dstM_mux0000<3>_mmx_out33, srcB_mux0000<2>_2_f6_637, Mmux_valB_mux00001966, Mmux_valB_mux00001965, valB_mux0000<20>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000803, Mmux_valB_mux0000802, dstM_mux0000<3>_mmx_out32, srcB_mux0000<2>_2_f6_4_f536, Mmux_valB_mux00001980, Mmux_valB_mux00001979, valB_mux0000<21>, srcB_mux0000<2>_mmx_out42, srcB_mux0000<2>_2_f6_636, Mmux_val_r101081645, srcB_mux0000<3>_mmx_out84, Mmux_valB_mux0000804, val_r8<21>, Mmux_valB_mux00001978.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001992, srcB_mux0000<2>_mmx_out41, srcB_mux0000<2>_2_f6_4_f535, Mmux_valB_mux0000783, srcB_mux0000<3>_mmx_out82, dstM_mux0000<3>_mmx_out31, Mmux_val_r101081653, srcB_mux0000<2>_2_f6_635, valB_mux0000<22>, Mmux_valB_mux00001994, Mmux_valB_mux00001993, Mmux_valB_mux0000785, val_r8<22>, Mmux_valB_mux0000784.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out30, srcB_mux0000<2>_2_f6_4_f534, Mmux_valB_mux0000731, valB_mux0000<23>, Mmux_valB_mux00002008, Mmux_valB_mux00002007, srcB_mux0000<2>_mmx_out40, srcB_mux0000<2>_2_f6_634, Mmux_valB_mux0000730, Mmux_valB_mux0000729, srcB_mux0000<3>_mmx_out80, val_r8<23>, Mmux_val_r101081661, Mmux_valB_mux00002006.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<3>_mmx_out78, Mmux_valB_mux0000673, srcB_mux0000<2>_2_f6_4_f532, Mmux_valB_mux0000672, Mmux_valB_mux00002022, Mmux_val_r101081669, Mmux_valB_mux0000671, srcB_mux0000<2>_2_f6_632, valB_mux0000<24>, Mmux_valB_mux00002021, Mmux_valB_mux00002020, val_r8<24>, dstM_mux0000<3>_mmx_out29, srcB_mux0000<2>_mmx_out39.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000619, Mmux_valB_mux0000618, valB_mux0000<25>, Mmux_valB_mux00002036, Mmux_valB_mux00002035, srcB_mux0000<3>_mmx_out76, Mmux_valB_mux0000617, srcB_mux0000<2>_2_f6_4_f531, srcB_mux0000<2>_mmx_out38, val_r8<25>, dstM_mux0000<3>_mmx_out28, Mmux_val_r101081677, srcB_mux0000<2>_2_f6_631, Mmux_valB_mux00002034.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<3>_mmx_out74, Mmux_valB_mux0000564, Mmux_val_r101081685, srcB_mux0000<2>_2_f6_630, valB_mux0000<26>, Mmux_valB_mux0000563, Mmux_valB_mux00002050, Mmux_valB_mux00002049, val_r8<26>, dstM_mux0000<3>_mmx_out27, Mmux_valB_mux00002048, srcB_mux0000<2>_mmx_out37, srcB_mux0000<2>_2_f6_4_f530, Mmux_valB_mux0000565.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000511, valB_mux0000<27>, srcB_mux0000<2>_2_f6_4_f529, Mmux_valB_mux0000510, srcB_mux0000<2>_mmx_out36, srcB_mux0000<3>_mmx_out72, dstM_mux0000<3>_mmx_out26, Mmux_valB_mux00002064, Mmux_valB_mux00002063, srcB_mux0000<2>_2_f6_629, Mmux_valB_mux0000509, val_r8<27>, Mmux_val_r101081693, Mmux_valB_mux00002062.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_628, valB_mux0000<28>, Mmux_val_r101081701, Mmux_valB_mux00002078, Mmux_valB_mux00002077, dstM_mux0000<3>_mmx_out25, Mmux_valB_mux0000457, val_r8<28>, Mmux_valB_mux0000456, srcB_mux0000<2>_mmx_out35, Mmux_valB_mux00002076, Mmux_valB_mux0000455, srcB_mux0000<2>_2_f6_4_f528, srcB_mux0000<3>_mmx_out70.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002090, srcB_mux0000<3>_mmx_out68, dstM_mux0000<3>_mmx_out24, srcB_mux0000<2>_2_f6_627, Mmux_valB_mux0000448, val_r8<29>, Mmux_valB_mux0000447, Mmux_val_r101081709, Mmux_valB_mux0000446, Mmux_valB_mux00002092, srcB_mux0000<2>_2_f6_4_f527, srcB_mux0000<2>_mmx_out34, Mmux_valB_mux00002091, valB_mux0000<29>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002120, Mmux_valB_mux00002119, val_r8<30>, Mmux_valB_mux0000444, Mmux_valB_mux0000443, Mmux_valB_mux00002118, srcB_mux0000<2>_2_f6_4_f526, Mmux_valB_mux0000442, srcB_mux0000<2>_mmx_out33, srcB_mux0000<3>_mmx_out66, Mmux_val_r101081725, srcB_mux0000<2>_2_f6_626, dstM_mux0000<3>_mmx_out23, valB_mux0000<30>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000438, val_r8<31>, Mmux_valB_mux00002133, Mmux_valB_mux00002134, Mmux_val_r101081733, srcB_mux0000<2>_2_f6_4_f525, Mmux_valB_mux00002132, dstM_mux0000<3>_mmx_out22, Mmux_valB_mux0000440, srcB_mux0000<2>_mmx_out32, srcB_mux0000<2>_2_f6_625, valB_mux0000<31>, srcB_mux0000<3>_mmx_out64, Mmux_valB_mux0000439.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101081741, Mmux_valB_mux00002148, Mmux_valB_mux00002147, srcB_mux0000<2>_mmx_out31, val_r8<32>, Mmux_valB_mux0000434, srcB_mux0000<3>_mmx_out62, srcB_mux0000<2>_2_f6_4_f524, Mmux_valB_mux00002146, dstM_mux0000<3>_mmx_out21, srcB_mux0000<2>_2_f6_624, valB_mux0000<32>, Mmux_valB_mux0000436, Mmux_valB_mux0000435.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000430, Mmux_valB_mux00002160, srcB_mux0000<2>_2_f6_4_f523, dstM_mux0000<3>_mmx_out20, srcB_mux0000<2>_mmx_out30, Mmux_val_r101081749, srcB_mux0000<2>_2_f6_623, srcB_mux0000<3>_mmx_out60, valB_mux0000<33>, Mmux_valB_mux00002162, Mmux_valB_mux00002161, Mmux_valB_mux0000432, val_r8<33>, Mmux_valB_mux0000431.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000424, srcB_mux0000<2>_2_f6_621, Mmux_valB_mux0000423, srcB_mux0000<2>_mmx_out29, dstM_mux0000<3>_mmx_out19, Mmux_valB_mux00002174, Mmux_valB_mux0000422, valB_mux0000<34>, Mmux_valB_mux00002176, val_r8<34>, Mmux_valB_mux00002175, Mmux_val_r101081757, srcB_mux0000<2>_2_f6_4_f521, srcB_mux0000<3>_mmx_out58.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out18, srcB_mux0000<2>_2_f6_4_f520, Mmux_valB_mux0000396, Mmux_valB_mux00002188, Mmux_valB_mux0000395, srcB_mux0000<2>_2_f6_620, srcB_mux0000<2>_mmx_out28, Mmux_val_r101081765, Mmux_valB_mux0000394, valB_mux0000<35>, srcB_mux0000<3>_mmx_out56, Mmux_valB_mux00002190, Mmux_valB_mux00002189, val_r8<35>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000330, Mmux_valB_mux00002202, valB_mux0000<36>, Mmux_valB_mux00002204, srcB_mux0000<2>_2_f6_4_f519, val_r8<36>, Mmux_valB_mux0000332, srcB_mux0000<2>_mmx_out27, Mmux_valB_mux00002203, Mmux_val_r101081773, srcB_mux0000<2>_2_f6_619, srcB_mux0000<3>_mmx_out54, dstM_mux0000<3>_mmx_out17, Mmux_valB_mux0000331.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000267, srcB_mux0000<2>_mmx_out26, srcB_mux0000<2>_2_f6_618, Mmux_valB_mux0000266, srcB_mux0000<3>_mmx_out52, Mmux_val_r101081781, valB_mux0000<37>, Mmux_valB_mux00002218, Mmux_valB_mux00002217, val_r8<37>, dstM_mux0000<3>_mmx_out16, Mmux_valB_mux0000268, srcB_mux0000<2>_2_f6_4_f518, Mmux_valB_mux00002216.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000204, valB_mux0000<38>, srcB_mux0000<2>_2_f6_4_f517, Mmux_valB_mux0000203, Mmux_valB_mux00002232, Mmux_valB_mux00002231, srcB_mux0000<2>_mmx_out25, Mmux_valB_mux0000202, val_r8<38>, srcB_mux0000<2>_2_f6_617, dstM_mux0000<3>_mmx_out15, srcB_mux0000<3>_mmx_out50, Mmux_val_r101081789, Mmux_valB_mux00002230.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_616, Mmux_valB_mux0000144, srcB_mux0000<2>_mmx_out24, valB_mux0000<39>, srcB_mux0000<3>_mmx_out48, Mmux_val_r101081797, dstM_mux0000<3>_mmx_out14, Mmux_valB_mux00002246, val_r8<39>, Mmux_valB_mux00002245, srcB_mux0000<2>_2_f6_4_f516, Mmux_valB_mux0000146, Mmux_valB_mux00002244, Mmux_valB_mux0000145.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002274, valB_mux0000<40>, Mmux_val_r101081813, Mmux_valB_mux000082, dstM_mux0000<3>_mmx_out13, srcB_mux0000<2>_2_f6_615, Mmux_valB_mux000081, val_r8<40>, srcB_mux0000<2>_mmx_out23, Mmux_valB_mux00002273, Mmux_valB_mux00002272, Mmux_valB_mux000080, srcB_mux0000<3>_mmx_out46, srcB_mux0000<2>_2_f6_4_f515.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out12, Mmux_valB_mux00002288, Mmux_valB_mux00002287, val_r8<41>, Mmux_valB_mux000019, srcB_mux0000<2>_2_f6_4_f514, Mmux_valB_mux00002286, Mmux_val_r101081821, Mmux_valB_mux000018, srcB_mux0000<2>_mmx_out22, srcB_mux0000<2>_2_f6_614, Mmux_valB_mux000017, srcB_mux0000<3>_mmx_out44, valB_mux0000<41>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002302, Mmux_valB_mux00002301, srcB_mux0000<2>_mmx_out21, Mmux_val_r101081829, srcB_mux0000<2>_2_f6_613, val_r8<42>, Mmux_valB_mux000011, srcB_mux0000<3>_mmx_out42, Mmux_valB_mux000010, Mmux_valB_mux00002300, Mmux_valB_mux00009, dstM_mux0000<3>_mmx_out11, valB_mux0000<42>, srcB_mux0000<2>_2_f6_4_f513.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00006, Mmux_valB_mux00002316, Mmux_valB_mux00002315, val_r8<43>, srcB_mux0000<2>_mmx_out20, Mmux_val_r101081837, Mmux_valB_mux00002314, srcB_mux0000<2>_2_f6_4_f512, srcB_mux0000<3>_mmx_out40, Mmux_valB_mux00007, Mmux_valB_mux00008, srcB_mux0000<2>_2_f6_612, dstM_mux0000<3>_mmx_out10, valB_mux0000<43>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001783, val_r8<44>, srcB_mux0000<2>_mmx_out19, Mmux_valB_mux00001784, srcB_mux0000<3>_mmx_out38, srcB_mux0000<2>_2_f6_4_f510, Mmux_valB_mux00002328, srcB_mux0000<2>_2_f6_610, dstM_mux0000<3>_mmx_out9, Mmux_valB_mux00001782, valB_mux0000<44>, Mmux_valB_mux00002330, Mmux_valB_mux00002329, Mmux_val_r101081845.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001778, Mmux_valB_mux00002342, dstM_mux0000<3>_mmx_out8, Mmux_valB_mux00001780, srcB_mux0000<2>_mmx_out18, srcB_mux0000<2>_2_f6_69, Mmux_val_r101081853, srcB_mux0000<2>_2_f6_4_f59, valB_mux0000<45>, srcB_mux0000<3>_mmx_out36, Mmux_valB_mux00002344, Mmux_valB_mux00001779, val_r8<45>, Mmux_valB_mux00002343.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001736, dstM_mux0000<3>_mmx_out7, Mmux_valB_mux00001735, Mmux_valB_mux00002356, srcB_mux0000<2>_2_f6_4_f58, valB_mux0000<46>, srcB_mux0000<2>_2_f6_68, Mmux_valB_mux00001734, srcB_mux0000<2>_mmx_out17, val_r8<46>, Mmux_valB_mux00002358, srcB_mux0000<3>_mmx_out34, Mmux_val_r101081861, Mmux_valB_mux00002357.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_4_f57, dstM_mux0000<3>_mmx_out6, srcB_mux0000<2>_mmx_out16, Mmux_valB_mux00002370, Mmux_valB_mux00001411, srcB_mux0000<3>_mmx_out32, Mmux_val_r101081869, valB_mux0000<47>, Mmux_valB_mux00001410, Mmux_valB_mux00002372, Mmux_valB_mux00002371, val_r8<47>, Mmux_valB_mux00001412, srcB_mux0000<2>_2_f6_67.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_4_f56, Mmux_valB_mux00002384, Mmux_valB_mux00001232, Mmux_valB_mux00001231, valB_mux0000<48>, srcB_mux0000<2>_2_f6_66, srcB_mux0000<3>_mmx_out30, Mmux_valB_mux00001230, val_r8<48>, srcB_mux0000<2>_mmx_out15, Mmux_val_r101081877, Mmux_valB_mux00002386, Mmux_valB_mux00002385, dstM_mux0000<3>_mmx_out5.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000875, Mmux_valB_mux00002398, srcB_mux0000<2>_mmx_out14, srcB_mux0000<3>_mmx_out28, Mmux_valB_mux0000874, Mmux_val_r101081885, valB_mux0000<49>, Mmux_valB_mux00002400, val_r8<49>, Mmux_valB_mux00002399, srcB_mux0000<2>_2_f6_65, dstM_mux0000<3>_mmx_out4, srcB_mux0000<2>_2_f6_4_f55, Mmux_valB_mux0000876.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000725, srcB_mux0000<2>_2_f6_4_f54, srcB_mux0000<2>_2_f6_64, srcB_mux0000<2>_mmx_out13, Mmux_val_r101081901, valB_mux0000<50>, Mmux_valB_mux00002428, Mmux_valB_mux00002427, val_r8<50>, dstM_mux0000<3>_mmx_out3, srcB_mux0000<3>_mmx_out26, Mmux_valB_mux0000727, Mmux_valB_mux0000726, Mmux_valB_mux00002426.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<51>, Mmux_valB_mux0000428, dstM_mux0000<3>_mmx_out2, Mmux_valB_mux00002442, Mmux_valB_mux00002441, val_r8<51>, srcB_mux0000<2>_2_f6_63, Mmux_valB_mux0000427, srcB_mux0000<2>_2_f6_4_f53, srcB_mux0000<2>_mmx_out12, Mmux_val_r101081909, srcB_mux0000<3>_mmx_out24, Mmux_valB_mux0000426, Mmux_valB_mux00002440.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00003, srcB_mux0000<2>_2_f6_62, valB_mux0000<52>, srcB_mux0000<3>_mmx_out22, Mmux_val_r101081917, dstM_mux0000<3>_mmx_out1, val_r8<52>, Mmux_valB_mux00002455, Mmux_valB_mux00005, srcB_mux0000<2>_mmx_out11, Mmux_valB_mux00002456, srcB_mux0000<2>_2_f6_4_f52, Mmux_valB_mux00004, Mmux_valB_mux00002454.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002468, dstM_mux0000<3>_mmx_out, Mmux_valB_mux00001, srcB_mux0000<3>_mmx_out20, Mmux_valB_mux0000, val_r8<53>, srcB_mux0000<2>_2_f6_4_f51, srcB_mux0000<2>_2_f6_61, Mmux_val_r101081925, Mmux_valB_mux00002470, Mmux_valB_mux00002469, srcB_mux0000<2>_mmx_out10, Mmux_valB_mux00002, valB_mux0000<53>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00001774, Mmux_valB_mux00002484, Mmux_val_r101081933, Mmux_valB_mux00002483, dstM_mux0000<3>_mmx_out767, val_r8<54>, Mmux_valB_mux00001775, srcB_mux0000<2>_mmx_out9, Mmux_valB_mux00001776, Mmux_valB_mux00002482, srcB_mux0000<3>_mmx_out18, srcB_mux0000<2>_2_f6_662, valB_mux0000<54>, srcB_mux0000<2>_2_f6_4_f562.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out766, Mmux_valB_mux00001770, srcB_mux0000<2>_mmx_out8, val_r8<55>, Mmux_valB_mux00002498, Mmux_valB_mux00002497, Mmux_valB_mux00001771, srcB_mux0000<2>_2_f6_4_f561, Mmux_val_r101081941, Mmux_valB_mux00002496, srcB_mux0000<2>_2_f6_661, valB_mux0000<55>, srcB_mux0000<3>_mmx_out16, Mmux_valB_mux00001772.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002512, Mmux_valB_mux00002511, val_r8<56>, Mmux_valB_mux00001768, Mmux_valB_mux00002510, srcB_mux0000<2>_2_f6_660, srcB_mux0000<3>_mmx_out14, Mmux_valB_mux00001767, valB_mux0000<56>, Mmux_valB_mux00001766, srcB_mux0000<2>_mmx_out7, dstM_mux0000<3>_mmx_out765, srcB_mux0000<2>_2_f6_4_f560, Mmux_val_r101081949.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<3>_mmx_out12, Mmux_valB_mux00001763, srcB_mux0000<2>_mmx_out6, Mmux_valB_mux00002525, Mmux_valB_mux00002524, Mmux_val_r101081957, Mmux_valB_mux00001762, Mmux_valB_mux00002526, srcB_mux0000<2>_2_f6_655, valB_mux0000<57>, dstM_mux0000<3>_mmx_out764, Mmux_valB_mux00001764, srcB_mux0000<2>_2_f6_4_f555, val_r8<57>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002538, srcB_mux0000<2>_2_f6_4_f544, Mmux_valB_mux00001759, srcB_mux0000<2>_2_f6_644, dstM_mux0000<3>_mmx_out763, valB_mux0000<58>, srcB_mux0000<3>_mmx_out10, Mmux_valB_mux00001760, Mmux_valB_mux00002540, Mmux_valB_mux00002539, srcB_mux0000<2>_mmx_out5, Mmux_valB_mux00001758, val_r8<58>, Mmux_val_r101081965.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_633, Mmux_valB_mux00002552, Mmux_valB_mux00001754, srcB_mux0000<3>_mmx_out8, Mmux_val_r101081973, dstM_mux0000<3>_mmx_out762, valB_mux0000<59>, Mmux_valB_mux00001756, srcB_mux0000<2>_mmx_out4, Mmux_valB_mux00002554, Mmux_valB_mux00002553, srcB_mux0000<2>_2_f6_4_f533, val_r8<59>, Mmux_valB_mux00001755.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002580, dstM_mux0000<3>_mmx_out761, srcB_mux0000<2>_2_f6_4_f522, Mmux_val_r101081989, srcB_mux0000<3>_mmx_out6, valB_mux0000<60>, Mmux_valB_mux00001750, srcB_mux0000<2>_2_f6_622, Mmux_valB_mux00002582, Mmux_valB_mux00002581, srcB_mux0000<2>_mmx_out3, Mmux_valB_mux00001751, val_r8<60>, Mmux_valB_mux00001752.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_2_f6_611, Mmux_valB_mux00001746, dstM_mux0000<3>_mmx_out760, srcB_mux0000<2>_2_f6_4_f511, srcB_mux0000<3>_mmx_out4, Mmux_valB_mux00001748, valB_mux0000<61>, Mmux_valB_mux00002596, srcB_mux0000<2>_mmx_out2, Mmux_valB_mux00002595, Mmux_valB_mux00002594, val_r8<61>, Mmux_val_r101081997, Mmux_valB_mux00001747.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux00002608, srcB_mux0000<3>_mmx_out2, Mmux_val_r101082005, valB_mux0000<62>, Mmux_valB_mux00001743, srcB_mux0000<2>_mmx_out1, Mmux_valB_mux00001742, val_r8<62>, Mmux_valB_mux00002610, srcB_mux0000<2>_2_f6_4_f5, Mmux_valB_mux00002609, srcB_mux0000<2>_2_f6_6, dstM_mux0000<3>_mmx_out759, Mmux_valB_mux00001744.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: srcB_mux0000<2>_6, srcB_mux0000<2>_mmx_out, srcB_mux0000<2>_4_f5, valB_mux0000<63>, Mmux_valB_mux00002624, Mmux_valB_mux00001740, Mmux_valB_mux00002623, Mmux_valB_mux00001739, Mmux_valB_mux00001738, val_r8<63>, Mmux_valB_mux00002622, Mmux_val_r101082013, dstM_mux0000<3>_mmx_out758, srcB_mux0000<3>_mmx_out.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>329, Mmux_valB_mux0000_4149, Mmux_valA_mux0000_6_f5, val_rbx<0>, Mmux_valA_mux0000_4_f6, valA_mux0000<0>, dstM_mux0000<3>_mmx_out377, Mmux_valA_mux0000_8.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f611, val_rbx<1>, dstM_mux0000<1>327, Mmux_valB_mux0000_4148, valA_mux0000<1>, Mmux_valA_mux0000_811, dstM_mux0000<3>_mmx_out376, Mmux_valA_mux0000_6_f511.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<2>, valA_mux0000<2>, Mmux_valA_mux0000_822, dstM_mux0000<1>325, Mmux_valA_mux0000_6_f522, Mmux_valB_mux0000_4147, dstM_mux0000<3>_mmx_out375, Mmux_valA_mux0000_4_f622.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f533, valA_mux0000<3>, Mmux_valA_mux0000_4_f633, dstM_mux0000<1>323, Mmux_valB_mux0000_4146, dstM_mux0000<3>_mmx_out374, Mmux_valA_mux0000_833, val_rbx<3>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f644, dstM_mux0000<3>_mmx_out373, Mmux_valA_mux0000_844, dstM_mux0000<1>321, Mmux_valB_mux0000_4145, Mmux_valA_mux0000_6_f544, valA_mux0000<4>, val_rbx<4>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_855, Mmux_valB_mux0000_4144, Mmux_valA_mux0000_6_f555, valA_mux0000<5>, dstM_mux0000<3>_mmx_out372, Mmux_valA_mux0000_4_f655, val_rbx<5>, dstM_mux0000<1>319.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f660, valA_mux0000<6>, dstM_mux0000<1>317, dstM_mux0000<3>_mmx_out371, Mmux_valB_mux0000_4143, Mmux_valA_mux0000_860, val_rbx<6>, Mmux_valA_mux0000_6_f560.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<7>, Mmux_valA_mux0000_861, val_rbx<7>, Mmux_valA_mux0000_6_f561, dstM_mux0000<3>_mmx_out370, dstM_mux0000<1>315, Mmux_valB_mux0000_4142, Mmux_valA_mux0000_4_f661.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<8>, Mmux_valA_mux0000_862, Mmux_valB_mux0000_4141, Mmux_valA_mux0000_6_f562, dstM_mux0000<1>313, val_rbx<8>, dstM_mux0000<3>_mmx_out369, Mmux_valA_mux0000_4_f662.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_863, Mmux_valA_mux0000_6_f563, val_rbx<9>, Mmux_valA_mux0000_4_f663, Mmux_valB_mux0000_4140, dstM_mux0000<3>_mmx_out368, dstM_mux0000<1>311, valA_mux0000<9>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<10>, val_rbx<10>, Mmux_valA_mux0000_81, dstM_mux0000<3>_mmx_out367, Mmux_valB_mux0000_4139, Mmux_valA_mux0000_6_f51, dstM_mux0000<1>309, Mmux_valA_mux0000_4_f61.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>307, valA_mux0000<11>, val_rbx<11>, Mmux_valA_mux0000_82, Mmux_valA_mux0000_6_f52, dstM_mux0000<3>_mmx_out366, Mmux_valA_mux0000_4_f62, Mmux_valB_mux0000_4138.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_4137, val_rbx<12>, Mmux_valA_mux0000_6_f53, Mmux_valA_mux0000_4_f63, dstM_mux0000<1>305, valA_mux0000<12>, dstM_mux0000<3>_mmx_out365, Mmux_valA_mux0000_83.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f64, val_rbx<13>, Mmux_valB_mux0000_4136, valA_mux0000<13>, dstM_mux0000<1>303, Mmux_valA_mux0000_84, dstM_mux0000<3>_mmx_out364, Mmux_valA_mux0000_6_f54.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<14>, Mmux_valB_mux0000_4135, Mmux_valA_mux0000_85, valA_mux0000<14>, Mmux_valA_mux0000_6_f55, dstM_mux0000<3>_mmx_out363, dstM_mux0000<1>301, Mmux_valA_mux0000_4_f65.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_86, Mmux_valA_mux0000_6_f56, valA_mux0000<15>, Mmux_valB_mux0000_4134, Mmux_valA_mux0000_4_f66, dstM_mux0000<3>_mmx_out362, dstM_mux0000<1>299, val_rbx<15>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_87, dstM_mux0000<1>297, Mmux_valA_mux0000_6_f57, Mmux_valA_mux0000_4_f67, valA_mux0000<16>, dstM_mux0000<3>_mmx_out361, Mmux_valB_mux0000_4133, val_rbx<16>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_4132, Mmux_valA_mux0000_4_f68, dstM_mux0000<1>295, Mmux_valA_mux0000_88, valA_mux0000<17>, dstM_mux0000<3>_mmx_out360, Mmux_valA_mux0000_6_f58, val_rbx<17>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_89, Mmux_valA_mux0000_6_f59, dstM_mux0000<3>_mmx_out359, dstM_mux0000<1>293, val_rbx<18>, Mmux_valB_mux0000_4131, valA_mux0000<18>, Mmux_valA_mux0000_4_f69.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_810, Mmux_valA_mux0000_6_f510, Mmux_valA_mux0000_4_f610, val_rbx<19>, dstM_mux0000<3>_mmx_out358, dstM_mux0000<1>291, valA_mux0000<19>, Mmux_valB_mux0000_4130.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>289, Mmux_valB_mux0000_4129, Mmux_valA_mux0000_812, val_rbx<20>, Mmux_valA_mux0000_6_f512, dstM_mux0000<3>_mmx_out357, Mmux_valA_mux0000_4_f612, valA_mux0000<20>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<21>, dstM_mux0000<1>287, Mmux_valA_mux0000_813, Mmux_valB_mux0000_4128, Mmux_valA_mux0000_6_f513, val_rbx<21>, Mmux_valA_mux0000_4_f613, dstM_mux0000<3>_mmx_out356.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_814, valA_mux0000<22>, Mmux_valA_mux0000_6_f514, dstM_mux0000<1>285, Mmux_valB_mux0000_4127, val_rbx<22>, Mmux_valA_mux0000_4_f614, dstM_mux0000<3>_mmx_out355.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f615, Mmux_valA_mux0000_815, Mmux_valA_mux0000_6_f515, valA_mux0000<23>, val_rbx<23>, Mmux_valB_mux0000_4126, dstM_mux0000<1>283, dstM_mux0000<3>_mmx_out354.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<24>, valA_mux0000<24>, Mmux_valA_mux0000_816, dstM_mux0000<1>281, Mmux_valB_mux0000_4125, Mmux_valA_mux0000_6_f516, dstM_mux0000<3>_mmx_out353, Mmux_valA_mux0000_4_f616.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<25>, Mmux_valA_mux0000_817, Mmux_valA_mux0000_6_f517, valA_mux0000<25>, Mmux_valA_mux0000_4_f617, dstM_mux0000<1>279, Mmux_valB_mux0000_4124, dstM_mux0000<3>_mmx_out352.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f518, val_rbx<26>, Mmux_valA_mux0000_4_f618, valA_mux0000<26>, dstM_mux0000<3>_mmx_out351, dstM_mux0000<1>277, Mmux_valA_mux0000_818, Mmux_valB_mux0000_4123.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f619, Mmux_valB_mux0000_4122, valA_mux0000<27>, Mmux_valA_mux0000_819, dstM_mux0000<3>_mmx_out350, Mmux_valA_mux0000_6_f519, dstM_mux0000<1>275, val_rbx<27>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f620, Mmux_valB_mux0000_4121, valA_mux0000<28>, Mmux_valA_mux0000_820, Mmux_valA_mux0000_6_f520, dstM_mux0000<3>_mmx_out349, dstM_mux0000<1>273, val_rbx<28>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_4120, dstM_mux0000<3>_mmx_out348, Mmux_valA_mux0000_821, Mmux_valA_mux0000_6_f521, valA_mux0000<29>, val_rbx<29>, Mmux_valA_mux0000_4_f621, dstM_mux0000<1>271.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f523, dstM_mux0000<3>_mmx_out347, Mmux_valB_mux0000_4119, Mmux_valA_mux0000_4_f623, dstM_mux0000<1>269, val_rbx<30>, valA_mux0000<30>, Mmux_valA_mux0000_823.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f624, dstM_mux0000<3>_mmx_out346, Mmux_valB_mux0000_4118, dstM_mux0000<1>267, val_rbx<31>, Mmux_valA_mux0000_824, valA_mux0000<31>, Mmux_valA_mux0000_6_f524.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_825, dstM_mux0000<3>_mmx_out345, Mmux_valA_mux0000_4_f625, val_rbx<32>, Mmux_valB_mux0000_4117, Mmux_valA_mux0000_6_f525, dstM_mux0000<1>265, valA_mux0000<32>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<33>, Mmux_valA_mux0000_6_f526, dstM_mux0000<3>_mmx_out344, Mmux_valA_mux0000_4_f626, val_rbx<33>, Mmux_valB_mux0000_4116, Mmux_valA_mux0000_826, dstM_mux0000<1>263.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>261, Mmux_valA_mux0000_4_f627, valA_mux0000<34>, dstM_mux0000<3>_mmx_out343, val_rbx<34>, Mmux_valA_mux0000_827, Mmux_valB_mux0000_4115, Mmux_valA_mux0000_6_f527.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>259, valA_mux0000<35>, dstM_mux0000<3>_mmx_out342, val_rbx<35>, Mmux_valA_mux0000_828, Mmux_valA_mux0000_6_f528, Mmux_valB_mux0000_4114, Mmux_valA_mux0000_4_f628.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_4113, dstM_mux0000<3>_mmx_out341, val_rbx<36>, Mmux_valA_mux0000_829, valA_mux0000<36>, dstM_mux0000<1>257, Mmux_valA_mux0000_6_f529, Mmux_valA_mux0000_4_f629.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out340, val_rbx<37>, Mmux_valA_mux0000_4_f630, Mmux_valB_mux0000_4112, valA_mux0000<37>, dstM_mux0000<1>255, Mmux_valA_mux0000_830, Mmux_valA_mux0000_6_f530.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f631, Mmux_valB_mux0000_4111, dstM_mux0000<3>_mmx_out339, val_rbx<38>, valA_mux0000<38>, Mmux_valA_mux0000_831, Mmux_valA_mux0000_6_f531, dstM_mux0000<1>253.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>251, dstM_mux0000<3>_mmx_out338, Mmux_valB_mux0000_4110, Mmux_valA_mux0000_832, Mmux_valA_mux0000_4_f632, Mmux_valA_mux0000_6_f532, valA_mux0000<39>, val_rbx<39>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f634, dstM_mux0000<3>_mmx_out337, dstM_mux0000<1>249, Mmux_valB_mux0000_4109, Mmux_valA_mux0000_834, valA_mux0000<40>, Mmux_valA_mux0000_6_f534, val_rbx<40>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out336, Mmux_valA_mux0000_835, Mmux_valA_mux0000_6_f535, dstM_mux0000<1>247, Mmux_valA_mux0000_4_f635, Mmux_valB_mux0000_4108, valA_mux0000<41>, val_rbx<41>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out335, Mmux_valA_mux0000_6_f536, Mmux_valB_mux0000_4107, Mmux_valA_mux0000_4_f636, dstM_mux0000<1>245, val_rbx<42>, valA_mux0000<42>, Mmux_valA_mux0000_836.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out334, Mmux_valA_mux0000_837, Mmux_valB_mux0000_4106, val_rbx<43>, dstM_mux0000<1>243, valA_mux0000<43>, Mmux_valA_mux0000_6_f537, Mmux_valA_mux0000_4_f637.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>241, dstM_mux0000<3>_mmx_out333, Mmux_valA_mux0000_838, Mmux_valA_mux0000_6_f538, val_rbx<44>, Mmux_valA_mux0000_4_f638, Mmux_valB_mux0000_4105, valA_mux0000<44>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<45>, Mmux_valA_mux0000_839, dstM_mux0000<3>_mmx_out332, dstM_mux0000<1>239, Mmux_valA_mux0000_6_f539, val_rbx<45>, Mmux_valA_mux0000_4_f639, Mmux_valB_mux0000_4104.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out331, Mmux_valA_mux0000_4_f640, valA_mux0000<46>, Mmux_valB_mux0000_4103, val_rbx<46>, dstM_mux0000<1>237, Mmux_valA_mux0000_840, Mmux_valA_mux0000_6_f540.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out330, valA_mux0000<47>, val_rbx<47>, Mmux_valB_mux0000_4102, Mmux_valA_mux0000_841, dstM_mux0000<1>235, Mmux_valA_mux0000_6_f541, Mmux_valA_mux0000_4_f641.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<1>233, dstM_mux0000<3>_mmx_out329, Mmux_valA_mux0000_842, Mmux_valB_mux0000_4101, val_rbx<48>, valA_mux0000<48>, Mmux_valA_mux0000_6_f542, Mmux_valA_mux0000_4_f642.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f543, val_rbx<49>, dstM_mux0000<3>_mmx_out328, dstM_mux0000<1>231, Mmux_valA_mux0000_4_f643, Mmux_valB_mux0000_4100, valA_mux0000<49>, Mmux_valA_mux0000_843.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<50>, dstM_mux0000<3>_mmx_out327, Mmux_valA_mux0000_845, dstM_mux0000<1>229, valA_mux0000<50>, Mmux_valA_mux0000_6_f545, Mmux_valB_mux0000_499, Mmux_valA_mux0000_4_f645.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_846, dstM_mux0000<3>_mmx_out326, Mmux_valA_mux0000_6_f546, Mmux_valA_mux0000_4_f646, valA_mux0000<51>, dstM_mux0000<1>227, Mmux_valB_mux0000_498, val_rbx<51>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out325, Mmux_valA_mux0000_4_f647, valA_mux0000<52>, Mmux_valA_mux0000_6_f547, dstM_mux0000<1>225, Mmux_valB_mux0000_497, Mmux_valA_mux0000_847, val_rbx<52>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_496, Mmux_valA_mux0000_4_f648, dstM_mux0000<3>_mmx_out324, Mmux_valA_mux0000_848, valA_mux0000<53>, Mmux_valA_mux0000_6_f548, val_rbx<53>, dstM_mux0000<1>223.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_495, dstM_mux0000<3>_mmx_out323, dstM_mux0000<1>221, Mmux_valA_mux0000_849, Mmux_valA_mux0000_6_f549, val_rbx<54>, valA_mux0000<54>, Mmux_valA_mux0000_4_f649.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f550, dstM_mux0000<1>219, Mmux_valB_mux0000_494, dstM_mux0000<3>_mmx_out322, Mmux_valA_mux0000_4_f650, val_rbx<55>, valA_mux0000<55>, Mmux_valA_mux0000_850.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_4_f651, dstM_mux0000<3>_mmx_out321, dstM_mux0000<1>217, Mmux_valB_mux0000_493, val_rbx<56>, Mmux_valA_mux0000_851, Mmux_valA_mux0000_6_f551, valA_mux0000<56>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<57>, Mmux_valA_mux0000_852, dstM_mux0000<3>_mmx_out320, Mmux_valA_mux0000_6_f552, dstM_mux0000<1>215, val_rbx<57>, Mmux_valB_mux0000_492, Mmux_valA_mux0000_4_f652.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out319, Mmux_valA_mux0000_6_f553, valA_mux0000<58>, dstM_mux0000<1>213, Mmux_valA_mux0000_4_f653, val_rbx<58>, Mmux_valA_mux0000_853, Mmux_valB_mux0000_491.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000_490, dstM_mux0000<3>_mmx_out318, valA_mux0000<59>, val_rbx<59>, dstM_mux0000<1>211, Mmux_valA_mux0000_854, Mmux_valA_mux0000_6_f554, Mmux_valA_mux0000_4_f654.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstM_mux0000<3>_mmx_out317, Mmux_valA_mux0000_856, val_rbx<60>, valA_mux0000<60>, Mmux_valA_mux0000_6_f556, Mmux_valB_mux0000_489, Mmux_valA_mux0000_4_f656, dstM_mux0000<1>209.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_6_f557, val_rbx<61>, dstM_mux0000<3>_mmx_out316, Mmux_valA_mux0000_4_f657, valA_mux0000<61>, Mmux_valB_mux0000_488, dstM_mux0000<1>207, Mmux_valA_mux0000_857.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<62>, dstM_mux0000<3>_mmx_out315, Mmux_valA_mux0000_4_f658, valA_mux0000<62>, Mmux_valB_mux0000_487, Mmux_valA_mux0000_858, Mmux_valA_mux0000_6_f558, dstM_mux0000<1>205.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rbx<63>, dstM_mux0000<3>_mmx_out313, Mmux_valA_mux0000_4_f659, Mmux_valA_mux0000_6_f559, dstM_mux0000<1>201, valA_mux0000<63>, Mmux_valB_mux0000_485, Mmux_valA_mux0000_859.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstE<1>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstE<0>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstE<3>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: dstE<2>.
+
+Optimizing unit <Register_Group> ...
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000179411, valB_mux0000<0>, Mmux_valB_mux0000180619, Mmux_valB_mux000018069, Mmux_val_r1010853213, Mmux_val_r101085321_f51, val_rsp<0>, N392.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: N393, Mmux_valB_mux0000194811, valB_mux0000<1>, Mmux_valB_mux0000196019, Mmux_val_r101085420_f51, Mmux_valB_mux000019609, val_rsp<1>, Mmux_val_r1010854203.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010855193, Mmux_valB_mux000021149, Mmux_valB_mux0000211419, valB_mux0000<2>, val_rsp<2>, Mmux_valB_mux0000210211, N394, Mmux_val_r101085519_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<3>, Mmux_valB_mux0000226819, Mmux_val_r101085618_f51, val_rsp<3>, N395, Mmux_valB_mux0000225611, Mmux_val_r1010856184, Mmux_valB_mux000022689.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010857173, Mmux_val_r101085717_f51, Mmux_valB_mux0000241011, Mmux_valB_mux0000242219, val_rsp<4>, N396, valB_mux0000<4>, Mmux_valB_mux000024229.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010858163, val_rsp<5>, Mmux_valB_mux0000256411, N397, Mmux_val_r101085816_f51, valB_mux0000<5>, Mmux_valB_mux0000257619, Mmux_valB_mux000025769.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<6>, Mmux_val_r101085861_f51, Mmux_valB_mux0000264619, Mmux_valB_mux0000263411, Mmux_val_r1010858613, N398, valB_mux0000<6>, Mmux_valB_mux000026469.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<7>, Mmux_val_r101085870_f51, Mmux_valB_mux0000266019, Mmux_val_r1010858703, Mmux_valB_mux0000264811, N399, valB_mux0000<7>, Mmux_valB_mux000026609.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085879_f51, Mmux_val_r1010858793, Mmux_valB_mux0000266211, Mmux_valB_mux0000267419, N400, valB_mux0000<8>, Mmux_valB_mux000026749, val_rsp<8>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010858883, Mmux_valB_mux000026889, valB_mux0000<9>, Mmux_val_r101085888_f51, Mmux_valB_mux0000268819, val_rsp<9>, Mmux_valB_mux0000267611, N401.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000182019, N402, Mmux_val_r1010853303, valB_mux0000<10>, Mmux_val_r101085330_f51, Mmux_valB_mux0000180811, val_rsp<10>, Mmux_valB_mux000018209.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010853393, Mmux_valB_mux0000182211, Mmux_valB_mux000018349, valB_mux0000<11>, Mmux_val_r101085339_f51, val_rsp<11>, Mmux_valB_mux0000183419, N403.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: N404, valB_mux0000<12>, Mmux_valB_mux0000184819, Mmux_valB_mux000018489, Mmux_val_r101085348_f51, val_rsp<12>, Mmux_valB_mux0000183611, Mmux_val_r1010853483.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000185011, valB_mux0000<13>, Mmux_val_r1010853573, N405, val_rsp<13>, Mmux_val_r101085357_f51, Mmux_valB_mux000018629, Mmux_valB_mux0000186219.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: N406, valB_mux0000<14>, Mmux_valB_mux0000187619, Mmux_valB_mux000018769, Mmux_val_r101085366_f51, val_rsp<14>, Mmux_valB_mux0000186411, Mmux_val_r1010853663.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<15>, Mmux_val_r1010853753, val_rsp<15>, Mmux_valB_mux0000189019, Mmux_valB_mux000018909, N407, Mmux_val_r101085375_f51, Mmux_valB_mux0000187811.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux000019049, Mmux_val_r1010853843, val_rsp<16>, Mmux_val_r101085384_f51, Mmux_valB_mux0000189211, N408, Mmux_valB_mux0000190419, valB_mux0000<16>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000191819, val_rsp<17>, Mmux_valB_mux0000190611, Mmux_val_r101085393_f51, Mmux_valB_mux000019189, N409, Mmux_val_r1010853933, valB_mux0000<17>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085402_f51, val_rsp<18>, Mmux_val_r1010854023, Mmux_valB_mux0000192011, valB_mux0000<18>, Mmux_valB_mux0000193219, N410, Mmux_valB_mux000019329.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<19>, Mmux_valB_mux0000193411, Mmux_val_r101085411_f51, N4111, Mmux_valB_mux000019469, valB_mux0000<19>, Mmux_valB_mux0000194619, Mmux_val_r1010854113.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000197419, Mmux_valB_mux000019749, Mmux_val_r101085429_f51, Mmux_valB_mux0000196211, N412, Mmux_val_r1010854293, valB_mux0000<20>, val_rsp<20>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000197611, Mmux_val_r1010854383, valB_mux0000<21>, Mmux_valB_mux000019889, N413, Mmux_val_r101085438_f51, val_rsp<21>, Mmux_valB_mux0000198819.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: N414, valB_mux0000<22>, Mmux_valB_mux000020029, Mmux_val_r1010854473, Mmux_val_r101085447_f51, val_rsp<22>, Mmux_valB_mux0000200219, Mmux_valB_mux0000199011.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085456_f51, Mmux_valB_mux0000201619, Mmux_valB_mux0000200411, valB_mux0000<23>, Mmux_val_r1010854563, N415, val_rsp<23>, Mmux_valB_mux000020169.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085465_f51, valB_mux0000<24>, Mmux_valB_mux000020309, Mmux_valB_mux0000201811, val_rsp<24>, Mmux_valB_mux0000203019, Mmux_val_r1010854653, N416.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000204419, valB_mux0000<25>, Mmux_valB_mux0000203211, N417, Mmux_valB_mux000020449, val_rsp<25>, Mmux_val_r1010854743, Mmux_val_r101085474_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000204611, valB_mux0000<26>, Mmux_valB_mux000020589, Mmux_valB_mux0000205819, val_rsp<26>, Mmux_val_r1010854833, Mmux_val_r101085483_f51, N418.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<27>, Mmux_val_r1010854923, Mmux_valB_mux0000207219, val_rsp<27>, Mmux_valB_mux0000206011, Mmux_valB_mux000020729, Mmux_val_r101085492_f51, N419.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux000020869, val_rsp<28>, Mmux_valB_mux0000207411, Mmux_valB_mux0000208619, N420, Mmux_val_r101085501_f51, valB_mux0000<28>, Mmux_val_r1010855013.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<29>, Mmux_val_r1010855103, N421, Mmux_valB_mux000021009, Mmux_valB_mux0000208811, Mmux_valB_mux0000210019, valB_mux0000<29>, Mmux_val_r101085510_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<30>, Mmux_valB_mux000021289, Mmux_val_r101085528_f51, Mmux_valB_mux0000211611, Mmux_val_r1010855284, Mmux_valB_mux0000212819, valB_mux0000<30>, N422.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<31>, Mmux_val_r101085537_f51, Mmux_valB_mux0000213011, Mmux_valB_mux0000214219, N423, Mmux_valB_mux000021429, valB_mux0000<31>, Mmux_val_r1010855373.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux000021569, Mmux_valB_mux0000215619, Mmux_val_r1010855463, N424, valB_mux0000<32>, Mmux_val_r101085546_f51, Mmux_valB_mux0000214411, val_rsp<32>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000217019, Mmux_val_r1010855553, Mmux_valB_mux0000215811, valB_mux0000<33>, Mmux_val_r101085555_f51, N425, val_rsp<33>, Mmux_valB_mux000021709.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000218419, Mmux_val_r101085564_f51, valB_mux0000<34>, Mmux_val_r1010855643, Mmux_valB_mux0000217211, N426, val_rsp<34>, Mmux_valB_mux000021849.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000218611, Mmux_val_r101085573_f51, valB_mux0000<35>, Mmux_val_r1010855733, Mmux_valB_mux0000219819, Mmux_valB_mux000021989, val_rsp<35>, N427.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<36>, Mmux_val_r1010855823, Mmux_valB_mux000022129, Mmux_valB_mux0000221219, val_rsp<36>, N428, Mmux_valB_mux0000220011, Mmux_val_r101085582_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux000022269, valB_mux0000<37>, Mmux_valB_mux0000222619, Mmux_valB_mux0000221411, Mmux_val_r1010855913, val_rsp<37>, Mmux_val_r101085591_f51, N429.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010856003, valB_mux0000<38>, val_rsp<38>, Mmux_val_r101085600_f51, Mmux_valB_mux0000224019, Mmux_valB_mux000022409, N430, Mmux_valB_mux0000222811.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<39>, Mmux_valB_mux0000224211, Mmux_val_r1010856093, val_rsp<39>, Mmux_valB_mux0000225419, N431, Mmux_val_r101085609_f51, Mmux_valB_mux000022549.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000228219, Mmux_valB_mux0000227011, val_rsp<40>, Mmux_val_r101085627_f51, Mmux_val_r1010856274, N432, Mmux_valB_mux000022829, valB_mux0000<40>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085636_f51, Mmux_valB_mux000022969, val_rsp<41>, Mmux_val_r1010856363, N433, Mmux_valB_mux0000228411, valB_mux0000<41>, Mmux_valB_mux0000229619.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<42>, Mmux_val_r1010856453, Mmux_valB_mux0000229811, Mmux_valB_mux000023109, Mmux_valB_mux0000231019, valB_mux0000<42>, N434, Mmux_val_r101085645_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<43>, Mmux_valB_mux0000232419, N435, Mmux_valB_mux000023249, Mmux_val_r101085654_f51, valB_mux0000<43>, Mmux_val_r1010856543, Mmux_valB_mux0000231211.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000232611, N436, Mmux_val_r101085663_f51, Mmux_val_r1010856633, Mmux_valB_mux000023389, valB_mux0000<44>, Mmux_valB_mux0000233819, val_rsp<44>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000235219, Mmux_valB_mux0000234011, Mmux_valB_mux000023529, valB_mux0000<45>, Mmux_val_r101085672_f51, N437, val_rsp<45>, Mmux_val_r1010856723.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000236619, valB_mux0000<46>, N438, Mmux_val_r101085681_f51, Mmux_val_r1010856813, Mmux_valB_mux000023669, Mmux_valB_mux0000235411, val_rsp<46>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux000023809, Mmux_val_r1010856903, Mmux_val_r101085690_f51, valB_mux0000<47>, Mmux_valB_mux0000238019, Mmux_valB_mux0000236811, val_rsp<47>, N439.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085699_f51, Mmux_valB_mux000023949, valB_mux0000<48>, N440, val_rsp<48>, Mmux_valB_mux0000238211, Mmux_val_r1010856993, Mmux_valB_mux0000239419.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000240819, valB_mux0000<49>, Mmux_valB_mux000024089, N441, val_rsp<49>, Mmux_val_r1010857083, Mmux_val_r101085708_f51, Mmux_valB_mux0000239611.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<50>, Mmux_val_r101085726_f51, N442, val_rsp<50>, Mmux_valB_mux0000242411, Mmux_valB_mux0000243619, Mmux_val_r1010857263, Mmux_valB_mux000024369.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<51>, Mmux_valB_mux0000243811, Mmux_valB_mux0000245019, val_rsp<51>, N443, Mmux_val_r1010857353, Mmux_val_r101085735_f51, Mmux_valB_mux000024509.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010857443, Mmux_val_r101085744_f51, val_rsp<52>, Mmux_valB_mux000024649, N444, Mmux_valB_mux0000246419, Mmux_valB_mux0000245211, valB_mux0000<52>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<53>, Mmux_val_r101085753_f51, Mmux_valB_mux000024789, Mmux_val_r1010857533, N445, Mmux_valB_mux0000247819, valB_mux0000<53>, Mmux_valB_mux0000246611.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<54>, Mmux_valB_mux000024929, Mmux_val_r1010857623, Mmux_valB_mux0000249219, Mmux_val_r101085762_f51, valB_mux0000<54>, Mmux_valB_mux0000248011, N446.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_rsp<55>, Mmux_valB_mux0000249411, Mmux_valB_mux000025069, N447, Mmux_val_r1010857713, valB_mux0000<55>, Mmux_valB_mux0000250619, Mmux_val_r101085771_f51.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: N448, Mmux_valB_mux0000252019, Mmux_valB_mux0000250811, Mmux_valB_mux000025209, Mmux_val_r101085780_f51, valB_mux0000<56>, Mmux_val_r1010857803, val_rsp<56>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000252211, valB_mux0000<57>, Mmux_val_r101085789_f51, Mmux_valB_mux000025349, val_rsp<57>, Mmux_val_r1010857893, Mmux_valB_mux0000253419, N449.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000254819, Mmux_valB_mux0000253611, Mmux_val_r101085798_f51, valB_mux0000<58>, Mmux_valB_mux000025489, val_rsp<58>, N450, Mmux_val_r1010857983.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r101085807_f51, Mmux_valB_mux000025629, valB_mux0000<59>, Mmux_valB_mux0000255011, val_rsp<59>, Mmux_val_r1010858073, Mmux_valB_mux0000256219, N451.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000259019, valB_mux0000<60>, Mmux_valB_mux0000257811, val_rsp<60>, Mmux_valB_mux000025909, Mmux_val_r1010858253, Mmux_val_r101085825_f51, N452.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valB_mux0000259211, valB_mux0000<61>, Mmux_val_r101085834_f51, Mmux_val_r1010858343, Mmux_valB_mux000026049, val_rsp<61>, N453, Mmux_valB_mux0000260419.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r1010858433, Mmux_valB_mux0000261819, valB_mux0000<62>, Mmux_val_r101085843_f51, N454, Mmux_valB_mux000026189, val_rsp<62>, Mmux_valB_mux0000260611.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valB_mux0000<63>, Mmux_valB_mux0000263219, val_rsp<63>, Mmux_valB_mux000026329, N455, Mmux_val_r101085852_f51, Mmux_valB_mux0000262011, Mmux_val_r1010858523.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f6, Mmux_valA_mux0000_5_f5, Mmux_valA_mux0000_7, val_r9<0>, Mmux_val_r10108205727, valA_mux0000<0>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_5_f522, Mmux_valA_mux0000_733, Mmux_val_r10108215627, val_r9<1>, valA_mux0000<1>, Mmux_valA_mux0000_3_f611.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108225527, val_r9<2>, Mmux_valA_mux0000_3_f622, Mmux_valA_mux0000_5_f544, valA_mux0000<2>, Mmux_valA_mux0000_766.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<3>, Mmux_val_r10108235427, Mmux_valA_mux0000_3_f633, Mmux_valA_mux0000_5_f566, Mmux_valA_mux0000_799, valA_mux0000<3>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<4>, Mmux_valA_mux0000_3_f644, Mmux_valA_mux0000_5_f588, Mmux_valA_mux0000_7132, valA_mux0000<4>, Mmux_val_r10108245327.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108255227, val_r9<5>, Mmux_valA_mux0000_5_f5110, Mmux_valA_mux0000_7165, valA_mux0000<5>, Mmux_valA_mux0000_3_f655.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<6>, Mmux_valA_mux0000_3_f660, Mmux_valA_mux0000_5_f5120, Mmux_val_r10108259727, Mmux_valA_mux0000_7180, val_r9<6>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f661, Mmux_valA_mux0000_5_f5122, Mmux_valA_mux0000_7183, valA_mux0000<7>, Mmux_val_r10108260627, val_r9<7>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108261527, valA_mux0000<8>, Mmux_valA_mux0000_3_f662, Mmux_valA_mux0000_5_f5124, Mmux_valA_mux0000_7186, val_r9<8>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108262427, valA_mux0000<9>, Mmux_valA_mux0000_3_f663, val_r9<9>, Mmux_valA_mux0000_5_f5126, Mmux_valA_mux0000_7189.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108206627, valA_mux0000<10>, Mmux_valA_mux0000_3_f61, Mmux_valA_mux0000_5_f52, val_r9<10>, Mmux_valA_mux0000_73.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_76, valA_mux0000<11>, Mmux_val_r10108207527, val_r9<11>, Mmux_valA_mux0000_3_f62, Mmux_valA_mux0000_5_f54.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f63, Mmux_valA_mux0000_5_f56, Mmux_valA_mux0000_79, val_r9<12>, Mmux_val_r10108208427, valA_mux0000<12>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<13>, Mmux_valA_mux0000_3_f64, Mmux_valA_mux0000_5_f58, Mmux_valA_mux0000_712, valA_mux0000<13>, Mmux_val_r10108209327.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_715, Mmux_val_r10108210227, val_r9<14>, valA_mux0000<14>, Mmux_valA_mux0000_3_f65, Mmux_valA_mux0000_5_f510.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f66, val_r9<15>, Mmux_valA_mux0000_5_f512, Mmux_valA_mux0000_718, valA_mux0000<15>, Mmux_val_r10108211127.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<16>, Mmux_valA_mux0000_3_f67, valA_mux0000<16>, Mmux_valA_mux0000_5_f514, Mmux_valA_mux0000_721, Mmux_val_r10108212027.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<17>, Mmux_valA_mux0000_724, valA_mux0000<17>, Mmux_val_r10108212927, Mmux_valA_mux0000_3_f68, Mmux_valA_mux0000_5_f516.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f69, Mmux_valA_mux0000_5_f518, Mmux_valA_mux0000_727, valA_mux0000<18>, Mmux_val_r10108213827, val_r9<18>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<19>, Mmux_val_r10108214727, Mmux_valA_mux0000_3_f610, Mmux_valA_mux0000_5_f520, Mmux_valA_mux0000_730, val_r9<19>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f612, valA_mux0000<20>, Mmux_valA_mux0000_5_f524, Mmux_valA_mux0000_736, Mmux_val_r10108216527, val_r9<20>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<21>, Mmux_valA_mux0000_3_f613, Mmux_valA_mux0000_5_f526, Mmux_val_r10108217427, val_r9<21>, Mmux_valA_mux0000_739.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_5_f528, valA_mux0000<22>, Mmux_valA_mux0000_742, Mmux_val_r10108218327, val_r9<22>, Mmux_valA_mux0000_3_f614.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<23>, Mmux_valA_mux0000_3_f615, Mmux_valA_mux0000_5_f530, Mmux_valA_mux0000_745, val_r9<23>, Mmux_val_r10108219227.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108220127, val_r9<24>, Mmux_valA_mux0000_3_f616, Mmux_valA_mux0000_5_f532, Mmux_valA_mux0000_748, valA_mux0000<24>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_5_f534, Mmux_valA_mux0000_751, val_r9<25>, Mmux_val_r10108221027, valA_mux0000<25>, Mmux_valA_mux0000_3_f617.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108221927, val_r9<26>, Mmux_valA_mux0000_3_f618, Mmux_valA_mux0000_5_f536, Mmux_valA_mux0000_754, valA_mux0000<26>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<27>, Mmux_valA_mux0000_3_f619, valA_mux0000<27>, Mmux_valA_mux0000_5_f538, Mmux_valA_mux0000_757, Mmux_val_r10108222827.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f620, Mmux_valA_mux0000_5_f540, val_r9<28>, Mmux_valA_mux0000_760, Mmux_val_r10108223727, valA_mux0000<28>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<29>, Mmux_valA_mux0000_3_f621, Mmux_valA_mux0000_5_f542, Mmux_val_r10108224627, Mmux_valA_mux0000_763, valA_mux0000<29>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f623, Mmux_valA_mux0000_5_f546, Mmux_val_r10108226427, Mmux_valA_mux0000_769, valA_mux0000<30>, val_r9<30>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108227327, valA_mux0000<31>, Mmux_valA_mux0000_3_f624, Mmux_valA_mux0000_5_f548, Mmux_valA_mux0000_772, val_r9<31>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<32>, Mmux_valA_mux0000_3_f625, Mmux_valA_mux0000_5_f550, val_r9<32>, Mmux_valA_mux0000_775, Mmux_val_r10108228227.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f626, Mmux_valA_mux0000_5_f552, valA_mux0000<33>, Mmux_valA_mux0000_778, Mmux_val_r10108229127, val_r9<33>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<34>, Mmux_valA_mux0000_3_f627, Mmux_valA_mux0000_5_f554, Mmux_valA_mux0000_781, Mmux_val_r10108230027, val_r9<34>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<35>, Mmux_val_r10108230927, val_r9<35>, Mmux_valA_mux0000_3_f628, Mmux_valA_mux0000_5_f556, Mmux_valA_mux0000_784.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f629, Mmux_val_r10108231827, Mmux_valA_mux0000_5_f558, Mmux_valA_mux0000_787, val_r9<36>, valA_mux0000<36>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<37>, Mmux_valA_mux0000_3_f630, Mmux_valA_mux0000_5_f560, Mmux_val_r10108232727, Mmux_valA_mux0000_790, valA_mux0000<37>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108233627, val_r9<38>, Mmux_valA_mux0000_3_f631, valA_mux0000<38>, Mmux_valA_mux0000_5_f562, Mmux_valA_mux0000_793.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f632, Mmux_valA_mux0000_5_f564, val_r9<39>, Mmux_valA_mux0000_796, valA_mux0000<39>, Mmux_val_r10108234527.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<40>, valA_mux0000<40>, Mmux_valA_mux0000_3_f634, Mmux_valA_mux0000_5_f568, Mmux_valA_mux0000_7102, Mmux_val_r10108236327.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<41>, Mmux_valA_mux0000_3_f635, Mmux_valA_mux0000_5_f570, Mmux_valA_mux0000_7105, valA_mux0000<41>, Mmux_val_r10108237227.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<42>, Mmux_valA_mux0000_3_f636, Mmux_valA_mux0000_5_f572, Mmux_valA_mux0000_7108, Mmux_val_r10108238127, val_r9<42>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<43>, Mmux_val_r10108239027, Mmux_valA_mux0000_3_f637, Mmux_valA_mux0000_5_f574, val_r9<43>, Mmux_valA_mux0000_7111.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108239927, Mmux_valA_mux0000_3_f638, Mmux_valA_mux0000_5_f576, valA_mux0000<44>, Mmux_valA_mux0000_7114, val_r9<44>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<45>, Mmux_valA_mux0000_3_f639, Mmux_valA_mux0000_5_f578, Mmux_val_r10108240827, Mmux_valA_mux0000_7117, val_r9<45>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_7120, valA_mux0000<46>, Mmux_val_r10108241727, val_r9<46>, Mmux_valA_mux0000_3_f640, Mmux_valA_mux0000_5_f580.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108242627, valA_mux0000<47>, Mmux_valA_mux0000_3_f641, Mmux_valA_mux0000_5_f582, Mmux_valA_mux0000_7123, val_r9<47>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108243527, val_r9<48>, Mmux_valA_mux0000_3_f642, Mmux_valA_mux0000_5_f584, Mmux_valA_mux0000_7126, valA_mux0000<48>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_7129, val_r9<49>, Mmux_val_r10108244427, Mmux_valA_mux0000_3_f643, valA_mux0000<49>, Mmux_valA_mux0000_5_f586.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<50>, Mmux_val_r10108246227, Mmux_valA_mux0000_3_f645, Mmux_valA_mux0000_5_f590, Mmux_valA_mux0000_7135, valA_mux0000<50>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_7138, val_r9<51>, Mmux_val_r10108247127, valA_mux0000<51>, Mmux_valA_mux0000_3_f646, Mmux_valA_mux0000_5_f592.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<52>, Mmux_valA_mux0000_3_f647, Mmux_valA_mux0000_5_f594, Mmux_valA_mux0000_7141, Mmux_val_r10108248027, valA_mux0000<52>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<53>, valA_mux0000<53>, Mmux_valA_mux0000_3_f648, Mmux_valA_mux0000_5_f596, Mmux_valA_mux0000_7144, Mmux_val_r10108248927.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_5_f598, Mmux_valA_mux0000_7147, valA_mux0000<54>, Mmux_valA_mux0000_3_f649, Mmux_val_r10108249827, val_r9<54>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108250727, Mmux_valA_mux0000_3_f650, Mmux_valA_mux0000_5_f5100, valA_mux0000<55>, Mmux_valA_mux0000_7150, val_r9<55>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<56>, Mmux_valA_mux0000_3_f651, Mmux_val_r10108251627, Mmux_valA_mux0000_5_f5102, Mmux_valA_mux0000_7153, val_r9<56>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_5_f5104, Mmux_valA_mux0000_7156, valA_mux0000<57>, Mmux_val_r10108252527, val_r9<57>, Mmux_valA_mux0000_3_f652.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<58>, Mmux_valA_mux0000_3_f653, Mmux_valA_mux0000_5_f5106, Mmux_valA_mux0000_7159, val_r9<58>, Mmux_val_r10108253427.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: valA_mux0000<59>, Mmux_val_r10108254327, val_r9<59>, Mmux_valA_mux0000_3_f654, Mmux_valA_mux0000_5_f5108, Mmux_valA_mux0000_7162.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f656, Mmux_valA_mux0000_5_f5112, Mmux_valA_mux0000_7168, val_r9<60>, Mmux_val_r10108256127, valA_mux0000<60>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_val_r10108257027, val_r9<61>, Mmux_valA_mux0000_3_f657, Mmux_valA_mux0000_5_f5114, Mmux_valA_mux0000_7171, valA_mux0000<61>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: Mmux_valA_mux0000_3_f658, Mmux_valA_mux0000_5_f5116, Mmux_valA_mux0000_7174, val_r9<62>, Mmux_val_r10108257927, valA_mux0000<62>.
+WARNING:Xst:2170 - Unit Register_Group : the following signal(s) form a combinatorial loop: val_r9<63>, Mmux_valA_mux0000_3_f659, Mmux_val_r10108258827, Mmux_valA_mux0000_5_f5118, Mmux_valA_mux0000_7177, valA_mux0000<63>.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Register_Group, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Register_Group.ngr
+Top Level Output File Name         : Register_Group
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 274
+
+Cell Usage :
+# BELS                             : 9819
+#      GND                         : 1
+#      LUT2                        : 1100
+#      LUT3                        : 2447
+#      LUT4                        : 4087
+#      MUXF5                       : 1799
+#      MUXF6                       : 320
+#      MUXF7                       : 64
+#      VCC                         : 1
+# FlipFlops/Latches                : 960
+#      LD                          : 768
+#      LD_1                        : 192
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 269
+#      IBUF                        : 141
+#      OBUF                        : 128
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s5000fg900-5 
+
+ Number of Slices:                     4231  out of  33280    12%  
+ Number of Slice Flip Flops:            832  out of  66560     1%  
+ Number of 4 input LUTs:               7634  out of  66560    11%  
+ Number of IOs:                         274
+ Number of bonded IOBs:                 269  out of    633    42%  
+    IOB Flip Flops:                     128
+ Number of GCLKs:                         8  out of      8   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------+---------------------------+-------+
+Clock Signal                              | Clock buffer(FF name)     | Load  |
+------------------------------------------+---------------------------+-------+
+val_rdx_cmp_eq00001(val_rdx_cmp_eq00001:O)| BUFG(*)(val_rdx_mux0001_0)| 64    |
+val_rbx_cmp_eq00001(val_rbx_cmp_eq00001:O)| BUFG(*)(val_rbx_mux0001_0)| 64    |
+val_rdi_cmp_eq00001(val_rdi_cmp_eq00001:O)| BUFG(*)(val_rdi_mux0001_0)| 64    |
+val_rbp_cmp_eq00001(val_rbp_cmp_eq00001:O)| BUFG(*)(val_rbp_mux0001_0)| 64    |
+val_rsp_cmp_eq00001(val_rsp_cmp_eq00001:O)| BUFG(*)(val_rsp_mux0001_0)| 64    |
+val_r12_cmp_eq00001(val_r12_cmp_eq00001:O)| BUFG(*)(val_r12_mux0001_0)| 64    |
+val_r11_cmp_eq00001(val_r11_cmp_eq00001:O)| BUFG(*)(val_r11_mux0001_0)| 64    |
+val_rsi_cmp_eq00001(val_rsi_cmp_eq00001:O)| BUFG(*)(val_rsi_mux0001_0)| 64    |
+val_r10_cmp_eq0000(val_r10_cmp_eq00001:O) | NONE(*)(val_r10_mux0001_0)| 64    |
+val_r9_cmp_eq0000(val_r9_cmp_eq00001:O)   | NONE(*)(val_r9_mux0001_0) | 64    |
+val_r8_cmp_eq0000(val_r8_cmp_eq00001:O)   | NONE(*)(val_r8_mux0001_0) | 64    |
+val_r13_not0001(val_r13_not0001_f5:O)     | NONE(*)(val_r13_0)        | 64    |
+val_rax_not0001(val_rax_not00011:O)       | NONE(*)(val_rax_mux0001_0)| 64    |
+valB_cmp_eq0000(valB_cmp_eq00001:O)       | NONE(*)(valB_0)           | 64    |
+valA_cmp_eq0000(valA_cmp_eq00001:O)       | NONE(*)(valA_0)           | 64    |
+------------------------------------------+---------------------------+-------+
+(*) These 15 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 2.038ns (Maximum Frequency: 490.689MHz)
+   Minimum input arrival time before clock: 21.224ns
+   Maximum output required time after clock: 6.141ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'val_r13_not0001'
+  Clock period: 2.038ns (frequency: 490.689MHz)
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Delay:               2.038ns (Levels of Logic = 1)
+  Source:            val_r13_0 (LATCH)
+  Destination:       val_r13_0 (LATCH)
+  Source Clock:      val_r13_not0001 falling
+  Destination Clock: val_r13_not0001 falling
+
+  Data Path: val_r13_0 to val_r13_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.551   0.771  val_r13_0 (val_r13_0)
+     MUXF5:S->O            1   0.540   0.000  Mmux_val_r13_mux0001590 (val_r13_mux0001<0>)
+     LD:D                      0.176          val_r13_0
+    ----------------------------------------
+    Total                      2.038ns (1.267ns logic, 0.771ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rdx_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.312ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rdx_mux0001_0 (LATCH)
+  Destination Clock: val_rdx_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rdx_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.579  dstE_mux0001<2> (dstE<2>)
+     LUT4:I3->O          128   0.479   2.338  Mmux_val_r10108442011 (N6)
+     LUT2:I0->O            1   0.479   0.000  val_rdx_mux0002<9>1 (val_rdx_mux0002<9>)
+     LD:D                      0.176          val_rdx_mux0001_9
+    ----------------------------------------
+    Total                     10.312ns (3.600ns logic, 6.712ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rbx_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.312ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rbx_mux0001_0 (LATCH)
+  Destination Clock: val_rbx_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rbx_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.579  dstE_mux0001<2> (dstE<2>)
+     LUT4:I3->O          128   0.479   2.338  Mmux_val_r10108327311 (N8)
+     LUT2:I0->O            1   0.479   0.000  val_rbx_mux0002<9>1 (val_rbx_mux0002<9>)
+     LD:D                      0.176          val_rbx_mux0001_9
+    ----------------------------------------
+    Total                     10.312ns (3.600ns logic, 6.712ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rdi_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.584ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rdi_mux0001_0 (LATCH)
+  Destination Clock: val_rdi_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rdi_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.851  dstE_mux0001<2> (dstE<2>)
+     LUT4:I0->O          128   0.479   2.338  Mmux_val_r10108384911 (N7)
+     LUT2:I0->O            1   0.479   0.000  val_rdi_mux0002<9>1 (val_rdi_mux0002<9>)
+     LD:D                      0.176          val_rdi_mux0001_9
+    ----------------------------------------
+    Total                     10.584ns (3.600ns logic, 6.984ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rbp_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.584ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rbp_mux0001_0 (LATCH)
+  Destination Clock: val_rbp_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rbp_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.851  dstE_mux0001<2> (dstE<2>)
+     LUT4:I0->O          128   0.479   2.338  Mmux_val_r10108263411 (N9)
+     LUT2:I0->O            1   0.479   0.000  val_rbp_mux0002<9>1 (val_rbp_mux0002<9>)
+     LD:D                      0.176          val_rbp_mux0001_9
+    ----------------------------------------
+    Total                     10.584ns (3.600ns logic, 6.984ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rsp_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              11.207ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rsp_mux0001_0 (LATCH)
+  Destination Clock: val_rsp_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rsp_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.851  dstE_mux0001<2> (dstE<2>)
+     LUT4:I0->O          256   0.479   2.961  Mmux_val_r10108532111 (N4)
+     LUT2:I0->O            1   0.479   0.000  val_rsp_mux0002<9>1 (val_rsp_mux0002<9>)
+     LD:D                      0.176          val_rsp_mux0001_9
+    ----------------------------------------
+    Total                     11.207ns (3.600ns logic, 7.607ns route)
+                                       (32.1% logic, 67.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r12_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.584ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_r12_mux0001_0 (LATCH)
+  Destination Clock: val_r12_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_r12_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.851  dstE_mux0001<2> (dstE<2>)
+     LUT4:I0->O          128   0.479   2.338  Mmux_val_r10108100011 (N13)
+     LUT2:I0->O            1   0.479   0.000  val_r12_mux0002<9>1 (val_r12_mux0002<9>)
+     LD:D                      0.176          val_r12_mux0001_9
+    ----------------------------------------
+    Total                     10.584ns (3.600ns logic, 6.984ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r11_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.971ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_r11_mux0001_0 (LATCH)
+  Destination Clock: val_r11_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_r11_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.615  dstE_mux0001<2> (dstE<2>)
+     LUT4:I2->O          256   0.479   2.961  Mmux_val_r1010810411 (N14)
+     LUT2:I0->O            1   0.479   0.000  val_r11_mux0002<9>1 (val_r11_mux0002<9>)
+     LD:D                      0.176          val_r11_mux0001_9
+    ----------------------------------------
+    Total                     10.971ns (3.600ns logic, 7.371ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rsi_cmp_eq00001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              11.207ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rsi_mux0001_0 (LATCH)
+  Destination Clock: val_rsi_cmp_eq00001 falling
+
+  Data Path: icode<2> to val_rsi_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.851  dstE_mux0001<2> (dstE<2>)
+     LUT4:I0->O          256   0.479   2.961  Mmux_val_r10108468211 (N5)
+     LUT2:I0->O            1   0.479   0.000  val_rsi_mux0002<9>1 (val_rsi_mux0002<9>)
+     LD:D                      0.176          val_rsi_mux0001_9
+    ----------------------------------------
+    Total                     11.207ns (3.600ns logic, 7.607ns route)
+                                       (32.1% logic, 67.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r10_cmp_eq0000'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.312ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_r10_mux0001_0 (LATCH)
+  Destination Clock: val_r10_cmp_eq0000 falling
+
+  Data Path: icode<2> to val_r10_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.579  dstE_mux0001<2> (dstE<2>)
+     LUT4:I3->O          128   0.479   2.338  Mmux_val_r1010812 (N15)
+     LUT2:I0->O            1   0.479   0.000  val_r10_mux0002<9>1 (val_r10_mux0002<9>)
+     LD:D                      0.176          val_r10_mux0001_9
+    ----------------------------------------
+    Total                     10.312ns (3.600ns logic, 6.712ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r9_cmp_eq0000'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.935ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_r9_mux0001_0 (LATCH)
+  Destination Clock: val_r9_cmp_eq0000 falling
+
+  Data Path: icode<2> to val_r9_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.579  dstE_mux0001<2> (dstE<2>)
+     LUT4:I3->O          256   0.479   2.961  Mmux_val_r10108205711 (N10)
+     LUT2:I0->O            1   0.479   0.000  val_r9_mux0002<9>1 (val_r9_mux0002<9>)
+     LD:D                      0.176          val_r9_mux0001_9
+    ----------------------------------------
+    Total                     10.935ns (3.600ns logic, 7.335ns route)
+                                       (32.9% logic, 67.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r8_cmp_eq0000'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.660ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_r8_mux0001_0 (LATCH)
+  Destination Clock: val_r8_cmp_eq0000 falling
+
+  Data Path: icode<2> to val_r8_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.615  dstE_mux0001<2> (dstE<2>)
+     LUT4:I2->O          192   0.479   2.649  Mmux_val_r10108154411 (N111)
+     LUT2:I0->O            1   0.479   0.000  val_r8_mux0002<9>1 (val_r8_mux0002<9>)
+     LD:D                      0.176          val_r8_mux0001_9
+    ----------------------------------------
+    Total                     10.660ns (3.600ns logic, 7.060ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_r13_not0001'
+  Total number of paths / destination ports: 13312 / 64
+-------------------------------------------------------------------------
+Offset:              13.123ns (Levels of Logic = 6)
+  Source:            icode<0> (PAD)
+  Destination:       val_r13_0 (LATCH)
+  Destination Clock: val_r13_not0001 falling
+
+  Data Path: icode<0> to val_r13_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.715   1.267  icode_0_IBUF (icode_0_IBUF)
+     LUT4:I0->O          459   0.479   3.949  dstM_or00001 (dstM_or0000)
+     LUT2:I0->O          417   0.479   3.745  dstM_mux0000<0>1_1 (dstM_mux0000<0>1_1)
+     LUT4:I0->O            2   0.479   1.040  Mmux_val_r13_mux00019544 (Mmux_val_r13_mux00019544)
+     LUT3:I0->O            1   0.479   0.000  Mmux_val_r13_mux00019590_G (N2791)
+     MUXF5:I1->O           1   0.314   0.000  Mmux_val_r13_mux00019590 (val_r13_mux0001<26>)
+     LD:D                      0.176          val_r13_26
+    ----------------------------------------
+    Total                     13.123ns (3.121ns logic, 10.002ns route)
+                                       (23.8% logic, 76.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'val_rax_not0001'
+  Total number of paths / destination ports: 4096 / 64
+-------------------------------------------------------------------------
+Offset:              10.000ns (Levels of Logic = 7)
+  Source:            icode<2> (PAD)
+  Destination:       val_rax_mux0001_0 (LATCH)
+  Destination Clock: val_rax_not0001 rising
+
+  Data Path: icode<2> to val_rax_mux0001_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.715   1.290  icode_2_IBUF (icode_2_IBUF)
+     LUT3:I0->O            4   0.479   0.802  dstE_mux0001<2>1_SW0 (N1178)
+     LUT4:I3->O            1   0.479   0.000  dstE_mux0001<2>_SW01 (dstE_mux0001<2>_SW0)
+     MUXF5:I1->O           1   0.314   0.704  dstE_mux0001<2>_SW0_f5 (N1180)
+     LUT4:I3->O           28   0.479   1.579  dstE_mux0001<2> (dstE<2>)
+     LUT4:I3->O           64   0.479   2.026  val_rax_cmp_eq00001 (val_rax_cmp_eq0000)
+     LUT2:I0->O            1   0.479   0.000  val_rax_mux0002<9>1 (val_rax_mux0002<9>)
+     LD_1:D                    0.176          val_rax_mux0001_9
+    ----------------------------------------
+    Total                     10.000ns (3.600ns logic, 6.400ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'valB_cmp_eq0000'
+  Total number of paths / destination ports: 302060 / 64
+-------------------------------------------------------------------------
+Offset:              21.224ns (Levels of Logic = 12)
+  Source:            icode<0> (PAD)
+  Destination:       valB_0 (LATCH)
+  Destination Clock: valB_cmp_eq0000 rising
+
+  Data Path: icode<0> to valB_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.715   1.267  icode_0_IBUF (icode_0_IBUF)
+     LUT4:I0->O          459   0.479   3.949  dstM_or00001 (dstM_or0000)
+     LUT2:I0->O          417   0.479   3.620  dstM_mux0000<0>1_1 (dstM_mux0000<0>1_1)
+     LUT4:I1->O           64   0.479   2.026  Mmux_val_r109940 (Mmux_val_r1010840)
+     LUT4:I0->O            1   0.479   0.851  Mmux_val_r1010853 (Mmux_val_r1010853)
+     LUT2:I1->O            3   0.479   0.941  Mmux_val_r1010861 (val_r10<1>)
+     LUT3:I1->O            1   0.479   0.000  srcB_mux0000<2>_2_f6_5117 (srcB_mux0000<2>_2_f6_5117)
+     MUXF5:I1->O           1   0.314   0.000  srcB_mux0000<2>_2_f6_4_f5_57 (srcB_mux0000<2>_2_f6_4_f558)
+     MUXF6:I0->O           2   0.298   1.040  srcB_mux0000<2>_2_f6_2_f6_57 (srcB_mux0000<2>_mmx_out62)
+     LUT4:I0->O            1   0.479   0.740  Mmux_valB_mux0000194911 (N457)
+     LUT3:I2->O            1   0.479   0.976  Mmux_valB_mux0000196019 (Mmux_valB_mux0000196019)
+     LUT4:I0->O            1   0.479   0.000  Mmux_valB_mux00001960321 (valB_mux0000<1>)
+     LD_1:D                    0.176          valB_1
+    ----------------------------------------
+    Total                     21.224ns (5.814ns logic, 15.410ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'valA_cmp_eq0000'
+  Total number of paths / destination ports: 158454 / 64
+-------------------------------------------------------------------------
+Offset:              17.329ns (Levels of Logic = 10)
+  Source:            icode<0> (PAD)
+  Destination:       valA_0 (LATCH)
+  Destination Clock: valA_cmp_eq0000 rising
+
+  Data Path: icode<0> to valA_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.715   1.267  icode_0_IBUF (icode_0_IBUF)
+     LUT4:I0->O          459   0.479   3.949  dstM_or00001 (dstM_or0000)
+     LUT2:I0->O          417   0.479   3.620  dstM_mux0000<0>1_1 (dstM_mux0000<0>1_1)
+     LUT4:I1->O           64   0.479   2.026  Mmux_val_r109940 (Mmux_val_r1010840)
+     LUT4:I0->O            1   0.479   0.851  Mmux_val_r1010853 (Mmux_val_r1010853)
+     LUT2:I1->O            3   0.479   0.941  Mmux_val_r1010861 (val_r10<1>)
+     LUT3:I1->O            1   0.479   0.000  Mmux_valA_mux0000_634 (Mmux_valA_mux0000_634)
+     MUXF5:I1->O           1   0.314   0.000  Mmux_valA_mux0000_5_f5_21 (Mmux_valA_mux0000_5_f522)
+     MUXF6:I0->O           1   0.298   0.000  Mmux_valA_mux0000_3_f6_10 (Mmux_valA_mux0000_3_f611)
+     MUXF7:I1->O           1   0.298   0.000  Mmux_valA_mux0000_2_f7_10 (valA_mux0000<1>)
+     LD_1:D                    0.176          valA_1
+    ----------------------------------------
+    Total                     17.329ns (4.675ns logic, 12.654ns route)
+                                       (27.0% logic, 73.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'valA_cmp_eq0000'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            valA_63 (LATCH)
+  Destination:       valA<63> (PAD)
+  Source Clock:      valA_cmp_eq0000 rising
+
+  Data Path: valA_63 to valA<63>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.551   0.681  valA_63 (valA_63)
+     OBUF:I->O                 4.909          valA_63_OBUF (valA<63>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'valB_cmp_eq0000'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            valB_63 (LATCH)
+  Destination:       valB<63> (PAD)
+  Source Clock:      valB_cmp_eq0000 rising
+
+  Data Path: valB_63 to valB<63>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.551   0.681  valB_63 (valB_63)
+     OBUF:I->O                 4.909          valB_63_OBUF (valB<63>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 181.00 secs
+Total CPU time to Xst completion: 180.56 secs
+ 
+--> 
+
+Total memory usage is 282468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  344 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+
